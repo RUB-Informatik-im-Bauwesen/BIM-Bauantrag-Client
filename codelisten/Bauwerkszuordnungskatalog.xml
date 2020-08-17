@@ -1,0 +1,3898 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gc:CodeList xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/" xmlns:xoev-cl="http://xoev.de/schemata/genericode/1_0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://docs.oasis-open.org/codelist/ns/genericode/1.0/ http://docs.oasis-open.org/codelist/cs-genericode-1.0/xsd/genericode.xsd http://xoev.de/schemata/genericode/1_0 http://xoev.de/schemata/genericode/1_0/xoev-cl-attributes.xsd">
+	<Annotation>
+		<Description>
+			<xoev-cl:beschreibung>Diese Codeliste stellt die Klassifikation von Gebäuden nach dem Bauwerkszuordnungskatalog dar. Dieser definiert die Art eines Gebäudes durch die Art der Nutzung. Herausgegeben wird der Bauwerkszuordnungskatalog durch den Ausschuss für staatlichen Hochbau der Bauministerkonferenz.</xoev-cl:beschreibung>
+			<xoev-cl:datumgueltigkeitab>2017-01-01</xoev-cl:datumgueltigkeitab>
+		</Description>
+	</Annotation>
+	<Identification>
+		<ShortName>BMK.Bauwerkszuordnungskatalog</ShortName>
+		<LongName>Klassifikation von Gebäuden nach dem Bauwerkszuordnungskatalog</LongName>
+		<Version>2017-01-01</Version>
+		<CanonicalUri>urn:xoev-de:bmk:codeliste:bauwerkszuordnungskatalog</CanonicalUri>
+		<CanonicalVersionUri>urn:xoev-de:bmk:codeliste:bauwerkszuordnungskatalog_2017-01-01</CanonicalVersionUri>
+		<Agency>
+			<ShortName>BMK</ShortName>
+			<LongName>Bauministerkonferenz</LongName>
+		</Agency>
+	</Identification>
+	<ColumnSet>
+		<Column Id="SCHLUESSEL" Use="required">
+			<ShortName>BWZ</ShortName>
+			<LongName>Bauwerkszuordnung</LongName>
+			<Data Type="string"/>
+		</Column>
+		<Column Id="Bezeichnung" Use="required">
+			<ShortName>Bezeichnung</ShortName>
+			<LongName>Bezeichnung der Gebäudeart</LongName>
+			<Data Type="string"/>
+		</Column>
+		<Column Id="Beispiel" Use="optional">
+			<ShortName>Beispielmuster</ShortName>
+			<LongName>Beispiel für die Gebäudeart</LongName>
+			<Data Type="string"/>
+		</Column>
+		<Key Id="codeKey">
+			<Annotation>
+				<AppInfo>
+					<xoev-cl:xoev-code/>
+				</AppInfo>
+			</Annotation>
+			<ShortName>codeKey</ShortName>
+			<ColumnRef Ref="SCHLUESSEL"/>
+		</Key>
+	</ColumnSet>
+	<SimpleCodeList>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>1000</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Parlament, Gericht, Verwaltung</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>1100</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Parlamentsgebäude</SimpleValue>
+			</Value>
+			<Value ColumnRef="Beispiel">
+				<SimpleValue>Bundestag/Landesparlamente</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>1200</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Gerichtsgebäude</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>1210</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Gerichtsgebäude mit normaler techn. Ausstattung</SimpleValue>
+			</Value>
+			<Value ColumnRef="Beispiel">
+				<SimpleValue>Amtsgerichte, Arbeitsgerichte, Finanzgerichte, Landgerichte, Oberlandesgerichte, Registergerichte, Sozialgerichte, Verwaltungsgerichte</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>1220</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Gerichtsgebäude mit höherer techn. Ausstattung</SimpleValue>
+			</Value>
+			<Value ColumnRef="Beispiel">
+				<SimpleValue>Bundesgerichte, Verfassungsgerichtshöfe</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>1230</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Staatsanwaltschaften</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>1240</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Notariate</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>1300</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Verwaltungsgebäude</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>1310</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Ministerien / Staatskanzleien / Landesvertretungen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>1320</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Verwaltungsgebäude mit einfacher techn. Ausstattung</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>1321</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Behördenzentren / Behördenhäuser</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>1322</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Rathäuser</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>1323</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Verwaltungsgebäude / Ämtergebäude</SimpleValue>
+			</Value>
+			<Value ColumnRef="Beispiel">
+				<SimpleValue>Arbeitsämter / Arbeitsagenturen, Bauämter, Finanzämter, Forstämter (ohne Wohnteil), Gewerbeämter, Wirtschaftsämter, Hochschulverwaltungsgebäude, Jugendämter, Katasterämter, Krankenkassengebäude, Schulämter, Statistische Ämter, Straßenbauämter, Sozialämter, Versorgungsämter</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>1330</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Verwaltungsgebäude mit erhöhter technischer Ausstattung / Ausrüstung / Funktion</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>1331</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Bankgebäude</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>1332</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Rechenzentren</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>1333</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Verwaltungsgebäude mit Prüffunktion</SimpleValue>
+			</Value>
+			<Value ColumnRef="Beispiel">
+				<SimpleValue>Bodenprüfstellen / Baustoffprüfstellen, Chemische Untersuchungsämter, Eichämter, Gesundheitsämter, Landesamt für Geowissenschaften, Lebensmitteluntersuchungsämter, TÜV-Gebäude, Umweltschutzämter, Veterinäruntersuchungsämter</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>1340</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Polizeidienstgebäude Bund / Land</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>1341</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Präsidien / Direktionen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>1342</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Kommissariate / Reviere / Inspektionen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>1343</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Polizeigebäude mit Zusatzfunktion</SimpleValue>
+			</Value>
+			<Value ColumnRef="Beispiel">
+				<SimpleValue>Autobahnpolizei, Wasserschutzpolizei</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>1344</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Bereitschaftspolizei / Bundespolizei</SimpleValue>
+			</Value>
+			<Value ColumnRef="Beispiel">
+				<SimpleValue>Stabsgebäude / Wachgebäude</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>1345</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Bundeskriminalämter</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>1346</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Landeskriminalämter</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>1350</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Militärische Verwaltungsgebäude</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>1351</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Militärische Verwaltungsgebäude mit einfacher techn. Ausstattung</SimpleValue>
+			</Value>
+			<Value ColumnRef="Beispiel">
+				<SimpleValue>Dienstleistungszentren, Stabsgebäude, Wehrbereichsverwaltungen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>1352</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Militärische Verwaltungsgebäude mit erhöhter techn. Ausstattung</SimpleValue>
+			</Value>
+			<Value ColumnRef="Beispiel">
+				<SimpleValue>Kreiswehrersatzämter, Staffelgebäude</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>1360</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Anlagen für Zoll</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>1361</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Zollämter</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>1362</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Zollabfertigungsanlagen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>1370</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Verwaltungsgebäude für Justizvollzug</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>1380</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Dienstgebäude für öffentl. Bereitschaftsdienste</SimpleValue>
+			</Value>
+			<Value ColumnRef="Beispiel">
+				<SimpleValue>Dienstgebäude Bauhöfe, Dienstgebäude Fuhrparks, Dienstgebäude THW-Höfe, Feuerwehrdienstgebäude, Flussmeistereidienstgebäude, Hafenmeistereidienstgebäude, Straßenmeistereidienstgebäude, Logistikgebäude</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>2000</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Wissenschaftl. Lehre u. Forschung</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>2100</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Gebäude für Lehre</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>2110</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Hörsäle</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>2111</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Hörsäle ohne Zusatznutzung</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>2112</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Hörsäle mit Zusatznutzung</SimpleValue>
+			</Value>
+			<Value ColumnRef="Beispiel">
+				<SimpleValue>mit Bibliothek (siehe 6730), mit Labor, mit Mensa</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>2120</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Seminargebäude</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>2200</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Institute für Lehre und Forschung</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>2210</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Geisteswissenschaften, Wirtschaftswissenschaften, Rechtswissenschaften, Sozialwissenschaften (Institutsgruppe 1)</SimpleValue>
+			</Value>
+			<Value ColumnRef="Beispiel">
+				<SimpleValue>Geschichte, Kulturwissenschaften, Philologie/Sprachwissenschaften, Philosophie, Psychologie, Verwaltungswissenschaften, Soziologie/Gesellschaftswiss., Theologie</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>2220</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Agrar- u. Forstwissenschaften, Tierhaltung (ohne hochinstall. Forschungsbereiche) (Institutsgruppe 2)</SimpleValue>
+			</Value>
+			<Value ColumnRef="Beispiel">
+				<SimpleValue>Tierversuchsgeb. m. Barrierehaltung, Infektionsber.</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>2230</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Erziehungswissenschaften, Kunst u. Design (Institutsgruppe 3)</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>2240</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Ingenieurwissenschaften, Informatik, Mathematik (Institutsgruppe 4)</SimpleValue>
+			</Value>
+			<Value ColumnRef="Beispiel">
+				<SimpleValue>Elektrotechnik, Bauwesen, Maschinenbau/Verfahrenstechnik</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>2250</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Naturwissenschaftenen, Sportwissenschaften (Institutsgruppe 5)</SimpleValue>
+			</Value>
+			<Value ColumnRef="Beispiel">
+				<SimpleValue>Geowissenschaften, Ernährungswissenschaften</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>2260</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Medizin (ohne Kliniken) (Institutsgruppe 6)</SimpleValue>
+			</Value>
+			<Value ColumnRef="Beispiel">
+				<SimpleValue>Anatomie, Genetik, Gerichtsmedizin, Human-/Veterinärmedizin, Kliniklabore, Nuklearmedizin, Pathologie, Strahlentherapie</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>2270</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Musikwissenschaften (Institutsgruppe 7)</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>2280</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Chemie, Physik, Biologie, Pharmazie (Institutsgruppe 8)</SimpleValue>
+			</Value>
+			<Value ColumnRef="Beispiel">
+				<SimpleValue>Pflanzenforschung</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>2300</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Institute f. Lehre und Forschung hochinstalliert</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>2310</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Medizinische Forschung (Institutsgruppe 9)</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>2320</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Physikforschung, Tierforschung, Biologieforschung, Materialforschung (Institutsgruppe 10)</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>2400</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Gebäude f. Forschung ohne Lehre</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>2410</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Forschungsanstalten</SimpleValue>
+			</Value>
+			<Value ColumnRef="Beispiel">
+				<SimpleValue>Forstliche -, Gentechnische -, Landwirtschaftliche -, Physikal./Techn. -, Astronomische - auch Sternwarten</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>2500</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Laborgebäude</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>2510</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Labore mit einfacher techn. Ausstattung</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>2520</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Speziallabore</SimpleValue>
+			</Value>
+			<Value ColumnRef="Beispiel">
+				<SimpleValue>Reinstraumlabore, Labore mit zusätzl. Sicherheitseinstufung</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>3000</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Gesundheit</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>3100</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Hochschulkliniken (mit Forschung und Lehre)</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>3110</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Hochschulkliniken</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>3111</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Hochschulkliniken gesamt</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>3112</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Behandlungszentren (Pflege sowie Untersuchung und Behandlung mehrerer Fachdisziplinen) nur in Anbindung an ein Krankenhaus</SimpleValue>
+			</Value>
+			<Value ColumnRef="Beispiel">
+				<SimpleValue>Inneres Zentrum, Mutter-Kind Zentrum, Neuromedizinisches Zentrum, Herzzentrum, Operatives Zentrum</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>3113</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Kliniken (Pflege sowie Untersuchung u. Behandlung einer Fachdisziplin)</SimpleValue>
+			</Value>
+			<Value ColumnRef="Beispiel">
+				<SimpleValue>ZMK Klinik, Augenklinik, HNO, Frauenklinik, Hautklinik</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>3120</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Gebäude für somatische Krankenversorgung</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>3121</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Bettenhaus (- Pflege)</SimpleValue>
+			</Value>
+			<Value ColumnRef="Beispiel">
+				<SimpleValue>Allgemeinpflege, Intensivmedizin (ITS/IMC), Neonatologie, Palliativpflege, Geburtshilfe und Wöchnerinnen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>3122</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Gebäude (Untersuchung und Behandlung)</SimpleValue>
+			</Value>
+			<Value ColumnRef="Beispiel">
+				<SimpleValue>Diagnose und Therapie, Radiologie, OP-Bereich, Patientenaufnahme, Notaufnahme (mit/ohne Aufnahmepflege)</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>3130</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Gebäude mit besonderen Anforderungen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>3131</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Strahlentherapie</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>3132</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Nuklearmedizin</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>3133</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Schwerstbrandverletztenzentrum</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>3134</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Palliativzentrum</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>3135</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Zentrum für hochkontagiöse Infektionskranke</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>3136</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Knochenmarktransplantationen (Pflege und Therapie)</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>3137</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Querschnittsgelähmte</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>3138</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Geriatrie</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>3139</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Sterilisation</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>3140</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Gebäude für psychiatrische und psychosomatische Krankenversorgung</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>3141</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Psychiatrie gesamt (Pflege u. Therapie)</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>3142</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Bettenhaus (Pflege)</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>3143</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Untersuchung und Therapie</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>3144</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Kinder- und Jugendpsychiatrie (gesamt)</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>3200</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Krankenhäuser (ohne Forschung und Lehre)</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>3210</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Krankenhäuser</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>3211</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Krankenhäuser gesamt</SimpleValue>
+			</Value>
+			<Value ColumnRef="Beispiel">
+				<SimpleValue>Krankenhäuser bis zu 250 Betten, Krankenhäuser bis zu 650 Betten, Krankenhäuser über 650 Betten</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>3212</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Behandlungszentren (Pflege sowie Untersuchung und Behandlung mehrerer Fachdisziplinen) nur in Anbindung an ein Krankenhaus</SimpleValue>
+			</Value>
+			<Value ColumnRef="Beispiel">
+				<SimpleValue>Inneres Zentrum, Mutter-Kind Zentrum, Neuromedizinisches Zentrum, Herzzentrum, Operatives Zentrum</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>3213</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Kliniken (Pflege sowie Untersuchung u. Behandlung einer Fachdisziplin)</SimpleValue>
+			</Value>
+			<Value ColumnRef="Beispiel">
+				<SimpleValue>ZMK Klinik, Augenklinik, HNO, Frauenklinik, Hautklinik</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>3220</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Gebäude für somatische Krankenversorgung</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>3221</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Bettenhaus (Pflege)</SimpleValue>
+			</Value>
+			<Value ColumnRef="Beispiel">
+				<SimpleValue>Allgemeinpflege, Intensivmedizin (ITS/IMC), Neonatologie, Palliativpflege</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>3222</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Gebäude (Untersuchung und Behandlung)</SimpleValue>
+			</Value>
+			<Value ColumnRef="Beispiel">
+				<SimpleValue>Diagnose und Therapie, Radiologie, Labor, OP-Bereich, Pathologie, Patientenaufnahme, Notaufnahme (mit/ohne Aufnahmepflege)</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>3230</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Gebäude mit besonderen Anforderungen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>3231</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Strahlentherapie</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>3232</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Nuklearmedizin</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>3233</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Schwerstbrandverletztenzentrum</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>3234</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Palliativzentrum</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>3235</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Zentrum für hochkontagiöse Infektionskranke</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>3236</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Knochenmarktransplantationen (Pflege und Therapie)</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>3237</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Querschnittsgelähmte</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>3238</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Geriatrie</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>3240</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Gebäude für psychiatrische und psychosomatische Krankenversorgung</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>3241</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Psychiatrie gesamt (Pflege u. Therapie)</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>3242</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Bettenhaus (Pflege)</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>3243</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Untersuchung und Therapie</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>3244</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Kinder- und Jugendpsychiatrie (gesamt)</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>3250</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Sonderkrankenhäuser</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>3251</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Forensik (Maßregelvollzug)</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>3300</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Gebäude für teilstationäre Versorgung</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>3310</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Tageskliniken</SimpleValue>
+			</Value>
+			<Value ColumnRef="Beispiel">
+				<SimpleValue>Dialyse, Geriatrie, Onkologie, Psychiatrie</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>3320</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Geburtshäuser</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>3400</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Gebäude für nicht stationäre Versorgung</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>3410</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Medizinische Versorgungszentren (MVZ)</SimpleValue>
+			</Value>
+			<Value ColumnRef="Beispiel">
+				<SimpleValue>Ärztehäuser</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>3420</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Arztpraxen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>3430</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Notfallpraxen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>3500</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Gebäude für den Sanitätsdienst der Bundeswehr</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>3510</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Bundeswehrkrankenhäuser</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>3511</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Bundeswehrkrankenhäuser gesamt (Pflege sowie Untersuchung und Behandlung, Ver- und Entsorgung)</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>3520</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Facharzt- und Sanitätszentren</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>3530</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Sonstige Gebäude für Untersuchung und Behandlung</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>3600</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Pflegeheime</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>3610</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Altenheime/Altenpflegeheime</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>3620</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Pflegeheime für Behinderte</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>3630</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Psychiatrische Pflegeheime</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>3640</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Tagespflegeeinrichtungen</SimpleValue>
+			</Value>
+			<Value ColumnRef="Beispiel">
+				<SimpleValue>Alten-, Behinderten-, Demenzpflege</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>3650</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Hospize</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>3700</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Rehabilitation (Reha)</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>3710</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Rehabilitationkliniken (Reha)</SimpleValue>
+			</Value>
+			<Value ColumnRef="Beispiel">
+				<SimpleValue>Kardiologische Reha (Herzinfarkt), Neurologische Reha (Schädel-Hirn-Trauma), Neurolog./Sportmed.Reha (Wirbelsäulenverletzungen), Onkologische Reha (Krebserkrankungen), Geriatrische Reha, (Vermeidung von Pflegebedürftigkeit)</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>3800</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Kur und Genesung</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>3810</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Kurkliniken</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>3820</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Sole- und Thermalbäder</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>3830</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Kurmittelhäuser</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>3840</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Gebäude für Erholung</SimpleValue>
+			</Value>
+			<Value ColumnRef="Beispiel">
+				<SimpleValue>Erholungsheime für Behinderte, Familieneinrichtungen, Kurerholungsheime, Müttererholungs-u. Genesungsheime</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>4000</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Bildung und Kultur</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>4100</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Allgemeinbildende Schulen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>4110</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Schulen, allgemein</SimpleValue>
+			</Value>
+			<Value ColumnRef="Beispiel">
+				<SimpleValue>Grundschulen, Hauptschulen, Realschulen, Gymnasien, Gesamtschulen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>4120</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Ganztagesschulen mit Verpflegungseinrichtung</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>4130</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Internatsschulen gesamt</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>4140</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Förderschulen / Sonderschulen</SimpleValue>
+			</Value>
+			<Value ColumnRef="Beispiel">
+				<SimpleValue>Förderschulen für Hochbegabung, Schulen für Erziehungshilfe, Blinde / Sehbehinderte, Gehörlose / Schwerhörige, Geistig Behinderte, Körperbehinderte, Lernbehinderte, Sprachbehinderte, Taubblinde</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>4200</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Berufsbildende Schulen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>4210</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Berufsbildende Schulen (gewerblich/wirtschaftlich)</SimpleValue>
+			</Value>
+			<Value ColumnRef="Beispiel">
+				<SimpleValue>hauswirtschaftl.-pflegerisch-sozialpädagog., kaufmännische, landwirtschaftliche / forstwirtschaftliche, mathematische / naturwissenschaftliche, wirtschaftliche, Finanzschulen, Verwaltungsschulen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>4220</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Berufsbildende Schulen mit höherer techn. Ausstattung</SimpleValue>
+			</Value>
+			<Value ColumnRef="Beispiel">
+				<SimpleValue>Feuerwehrschulen, Polizeischulen, Bautechnik, Elektrotechnik, Fahrzeugtechnik, Holztechnik, Medizintechnik, Metalltechnik</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>4230</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Berufsakademien / Berufskollegs</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>4240</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Ausbildungsstätten Bundeswehr / Polizei</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>4241</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Unteroffiziers- / Offiziersschulen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>4242</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Führungsakademien</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>4243</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Fachschulen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>4244</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Fachhochschulen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>4245</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Besondere Ausbildungsstätten</SimpleValue>
+			</Value>
+			<Value ColumnRef="Beispiel">
+				<SimpleValue>Simulatorgebäude, Tieftauchkampfbecken, Sanitätsdienst</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>4300</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Bildungseinrichtungen für Erwachsene</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>4310</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Bildungszentren</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>4320</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Ausbildungsstätten</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>4330</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Volkshochschulen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>4400</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Kinderbetreuungseinrichtungen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>4410</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Kindertagesstätten</SimpleValue>
+			</Value>
+			<Value ColumnRef="Beispiel">
+				<SimpleValue>Kindergärten, Kinderhorte, Kinderkrippen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>4420</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Kindertagesstätten mit Küche</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>4430</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Sonderkindertagesstätten</SimpleValue>
+			</Value>
+			<Value ColumnRef="Beispiel">
+				<SimpleValue>Kinderspielhäuser</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>4440</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Sonderkindertagesstätten mit Küche</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>4500</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Bibliotheken / Archive</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>4510</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Bibliotheksgebäude mit einfacher techn. Ausstattung</SimpleValue>
+			</Value>
+			<Value ColumnRef="Beispiel">
+				<SimpleValue>Stadtbücherei</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>4520</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Bibliotheksgebäude mit erhöhter techn. Ausstattung</SimpleValue>
+			</Value>
+			<Value ColumnRef="Beispiel">
+				<SimpleValue>Unibibliotheken</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>4530</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Archive mit einfacher techn. Ausstattung</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>4540</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Archive mit erhöhter techn. Ausstattung</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>4600</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Ausstellungsgebäude</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>4610</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Galerien</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>4620</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Museen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>4700</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Veranstaltungsgebäude</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>4710</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Veranstaltungsgebäude mit einfacher techn. Ausstattung</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>4711</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Gemeinschaftshäuser</SimpleValue>
+			</Value>
+			<Value ColumnRef="Beispiel">
+				<SimpleValue>Bürgerhäuser, Dorfgemeinschaftshäuser, Gemeinschaftszentren, Stadthallen / Ausstellungshallen / Messehallen, Spielcasinos</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>4712</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Haus des Gastes</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>4720</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Veranstaltungsgebäude mit erhöhter techn. Ausstattung</SimpleValue>
+			</Value>
+			<Value ColumnRef="Beispiel">
+				<SimpleValue>Kinos, Kommunikationszentren, Konferenzzentren / Foren, Konzertgebäude, Opernhäuser, Theatergebäude</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>4800</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Sakralbauten</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>4810</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Dome/ Münster</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>4820</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Kirchen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>4830</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Kapellen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>4900</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Historische Gebäude / Gedenkstätten</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>4910</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Schlösser</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>4920</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Burgen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>4930</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Ruinen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>4940</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Baudenkmäler</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>4950</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Gedenkstätten</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>4960</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Gedenksteine</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>5000</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Sport</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>5100</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Sporthallen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>5110</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Ein- und Mehrfeldhallen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>5120</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Gymnastikhallen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>5130</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Sporthallen mit Mehrzwecknutzung</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>5200</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Schwimmhallen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>5210</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Hallenbäder</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>5220</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Spaß- und Freizeitbäder</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>5230</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Thermalbäder</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>5240</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Hallenbäder mit Freibadanlagen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>5300</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Sondersportanlagen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>5310</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Kegelbahnen / Bowling</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>5320</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Schießanlagen / auch für die Polizei</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>5321</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Schießstände</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>5322</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Raumschießanlagen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>5330</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Reithallen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>5340</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Eissporthallen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>5350</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Tennishallen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>5360</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Sportleistungszentren</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>5400</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Gebäude für Sportaußenanlagen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>5410</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Umkleidekabinen / Gebäude</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>5420</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Tribünengebäude</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>5430</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Sportheime / Clubheime</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>5440</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Platzwartgebäude</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>5450</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Sportbetriebsgebäude</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>5500</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Sportaußenanlagen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>5510</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Sportplätze</SimpleValue>
+			</Value>
+			<Value ColumnRef="Beispiel">
+				<SimpleValue>Fußballplätze, Kleinspielfelder, Laufbahnen, Minigolfplätze, Radrennbahnen, Reitplätze, Tennisplätze</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>5520</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Freibadanlagen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>5530</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Stadien / Arenen</SimpleValue>
+			</Value>
+			<Value ColumnRef="Beispiel">
+				<SimpleValue>Fußballstadien, Reiterstadien</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>6000</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Wohnen, Beherbergen, Betreuen, Verpflegen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>6100</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Wohnhäuser</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>6110</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Einfamilienhäuser</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>6111</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Einfamilienhäuser nur für Wohnzwecke</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>6112</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Einfamilienhäuser mit zusätzl. Nutzung</SimpleValue>
+			</Value>
+			<Value ColumnRef="Beispiel">
+				<SimpleValue>Forstdienstgebäude</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>6120</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Mehrfamilienhäuser</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>6121</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Mehrfamilienhäuser nur für Wohnzwecke</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>6122</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Mehrfamilienhäuser mit zusätzl. Nutzung</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>6123</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Behelfswohngebäude</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>6200</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Wohnheime</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>6210</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Altenwohnheime / Feierabendheime</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>6220</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Personalwohnheime, Schwesternwohnheime</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>6230</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Studentenwohnheime</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>6240</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Behindertenwohnheime</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>6250</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Sportlerwohnheime</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>6260</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Schülerwohnheime</SimpleValue>
+			</Value>
+			<Value ColumnRef="Beispiel">
+				<SimpleValue>Internatsgebäude</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>6270</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Kinderheime</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>6300</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Gemeinschaftsunterkünfte</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>6310</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Unterkünfte für Bundeswehr und Polizei</SimpleValue>
+			</Value>
+			<Value ColumnRef="Beispiel">
+				<SimpleValue>Mannschaftsunterkünfte, Unterkünfte für Offiziere / Unteroffiziere</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>6320</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Sammellagerunterkünfte</SimpleValue>
+			</Value>
+			<Value ColumnRef="Beispiel">
+				<SimpleValue>Flüchtlingsunterbringung, Aussiedlerunterbringung</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>6330</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Klostergebäude</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>6400</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Beherbergungsstätten</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>6410</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Hotels / Pensionen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>6420</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Jugendherbergen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>6430</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Gästehäuser / Ferienhäuser</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>6440</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Ferienheime / Schullandheime</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>6500</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Beherbergen im Justizvollzug</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>6510</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Justizvollzugsanstalten Gesamtanlagen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>6520</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Jugendvollzugsanstalten Gesamtanlagen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>6530</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Jugendarrestanstalten</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>6540</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Unterkunftsgebäude</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>6541</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Zellengebäude</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>6542</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Freigängerhäuser</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>6600</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Betreuungseinrichtungen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>6610</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Studentenhäuser</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>6620</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Altenzentren / Altentagesstätten</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>6630</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Jugendzentren</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>6640</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Zentren für Gemeinschaftshilfe / Sozialgebäude</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>6650</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Betreuungsgebäude der Bundeswehr</SimpleValue>
+			</Value>
+			<Value ColumnRef="Beispiel">
+				<SimpleValue>Soldatenheime</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>6700</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Verpflegungseinrichtungen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>6710</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Gaststätten</SimpleValue>
+			</Value>
+			<Value ColumnRef="Beispiel">
+				<SimpleValue>Vereinsheime</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>6720</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Mensen / Kantinen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>6730</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Mensen mit Zusatznutzung</SimpleValue>
+			</Value>
+			<Value ColumnRef="Beispiel">
+				<SimpleValue>Mensa mit Bibliothek (siehe auch 2112), Mensa mit Hörsaal</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>6740</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Raststätten</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>6750</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Wirtschaftsgebäude der Bundeswehr</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>6751</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Verpflegungsteilnehmer VT 300/600/900</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>6752</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Verpflegungsteilnehmer VT 1200</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>6753</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Verpflegungsteilnehmer VT über 1200</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>6760</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Wirtschaftsgeb. d. Bundeswehr mit Zusatznutzung</SimpleValue>
+			</Value>
+			<Value ColumnRef="Beispiel">
+				<SimpleValue>Wirtschafts- und Betreuungsgebäude</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>6770</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Verpflegungseinrichtung in der JVA</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7000</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Produktion, Lagerung, Verkauf, Wartung und Pflege, zentr. Ver- u. Entsorgung, öffentliche Bereitschaftsdienste</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7100</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Produktionsstätten / Verarbeitung</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7110</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Gewerbliche Produktionsstätten</SimpleValue>
+			</Value>
+			<Value ColumnRef="Beispiel">
+				<SimpleValue>Handwerksbetriebe, Brauereien, Keltereien, Molkereien, Schlachthöfe</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7120</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Industrielle Produktionsstätten</SimpleValue>
+			</Value>
+			<Value ColumnRef="Beispiel">
+				<SimpleValue>Chemie, Holz, Lebensmittel, Metall, Stahl, Textil</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7200</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Gebäude für Haltung u. Pflege von Tieren und Pflanzen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7210</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Gebäude für Tierhaltung (Landwirtschaft, Ausstellung, Züchtung)</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7211</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Kleintierhäuser</SimpleValue>
+			</Value>
+			<Value ColumnRef="Beispiel">
+				<SimpleValue>Aquarien, Insektarien, Terrarien</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7212</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Großtierhäuser</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7213</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Stallgebäude</SimpleValue>
+			</Value>
+			<Value ColumnRef="Beispiel">
+				<SimpleValue>Auslaufhallen, Offenställe</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7214</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Hundezwinger</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7220</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Gebäude für Tiermedizin/ Pflege</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7221</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Tierkliniken</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7222</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Tierarztpraxen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7230</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Gebäude für Pflanzenhaltung (Ausstellung, Züchtung)</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7231</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Gärtnereigebäude</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7232</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Gewächshäuser</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7233</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Gärtnerische Anlagen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7240</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Produktionsstätten bei Tier- und Pflanzenhaltung</SimpleValue>
+			</Value>
+			<Value ColumnRef="Beispiel">
+				<SimpleValue>Imkereien, Saatgutbearbeitung</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7300</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Gebäude für Lagerung</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7310</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Offene Lagergebäude</SimpleValue>
+			</Value>
+			<Value ColumnRef="Beispiel">
+				<SimpleValue>Lagerboxen, Soleanlagen, Solemixstationen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7320</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Geschlossenene Lagergebäude</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7321</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Landwirtschaftliche Lagergebäude</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7322</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Streugutlagerhallen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7323</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Gerätelagerhallen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7324</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Magazingebäude</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7325</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Magazingebäude mit besonderen Anforderungen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7326</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Hochregallager</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7327</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Lagergebäude in Hafenanlagen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7328</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Lagergebäude der Bundeswehr</SimpleValue>
+			</Value>
+			<Value ColumnRef="Beispiel">
+				<SimpleValue>Hochregallager, Kammergebäude, Nachschubhallen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7330</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Siloanlagen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7331</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Futter- und Getreidesilos</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7332</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Streugutsilos</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7333</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Offene Fahrsilos</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7334</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Güllebehälter</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7340</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Kühlhäuser</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7350</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Brennstoff- / Betriebsstofflagergebäude</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7351</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Feste Brennstoffe</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7352</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Flüssige Brennstoffe</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7353</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Gasförmige Brennstoffe</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7360</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Gefahrstofflagergebäude</SimpleValue>
+			</Value>
+			<Value ColumnRef="Beispiel">
+				<SimpleValue>Technische Gase, Chemikalien, Radioaktive Stoffe</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7370</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Munitionslagergebäude</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7400</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Verkaufsstätten</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7410</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Kioske</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7420</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Einzelhandel</SimpleValue>
+			</Value>
+			<Value ColumnRef="Beispiel">
+				<SimpleValue>Ladengebäude, Warenhäuser</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7430</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Großhandelsgebäude</SimpleValue>
+			</Value>
+			<Value ColumnRef="Beispiel">
+				<SimpleValue>Großmärkte</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7500</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Werkstätten</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7510</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Allgemeine Werkstätten</SimpleValue>
+			</Value>
+			<Value ColumnRef="Beispiel">
+				<SimpleValue>Klempnerwerkstätten, Schlosserwerkstätten, Schreinerwerkstätten</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7520</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Allgemeine Werkstätten mit Zusatzfunktion</SimpleValue>
+			</Value>
+			<Value ColumnRef="Beispiel">
+				<SimpleValue>Ausbildungswerkstätten, Behindertenwerkstätten, JVA-Werkstätten, Lehrwerkstätten</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7530</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Gebäude zur Wartung, Instandsetzung u. Reparatur für</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7531</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>KFZ</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7532</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Flugzeuge / Hubschrauber</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7533</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Schienenfahrzeuge</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7534</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Kettenfahrzeuge</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7535</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Schiffe</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7536</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Waffen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7540</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Kfz.-Werkstätten mit Garage und Lagerung</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7600</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Gebäude zur Pflege / zum Abstellen von Fahrzeugen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7610</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Pflege- und Waschhallen für</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7611</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>KFZ</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7612</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Flugzeuge / Hubschrauber</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7613</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Schienenfahrzeuge</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7614</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Kettenfahrzeuge</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7615</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Schiffe</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7620</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Kfz.-Pflege- und Waschhallen mit Zusatzfunktion</SimpleValue>
+			</Value>
+			<Value ColumnRef="Beispiel">
+				<SimpleValue>Lagerung, Werkstatt, Garagen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7630</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>KFZ-Prüfanlagen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7640</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Garagen und Parkbauten</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7641</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>PKW-Garagen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7642</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>KFZ-Garagen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7643</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Parkpaletten ohne UG</SimpleValue>
+			</Value>
+			<Value ColumnRef="Beispiel">
+				<SimpleValue>Überdachte Abstellplätze</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7644</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Parkhäuser</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7645</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Tiefgaragen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7650</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Hallen für sonstige Verkehrsmittel</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7651</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Flugzeuge / Hubschrauber</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7652</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Schienenfahrzeuge</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7653</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Schiffe</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7660</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Fahrradparkhäuser</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7700</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Gesamtanlage für öffentl. Bereitschaftsdienste</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7710</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Straßenmeistereien</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7720</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Flussmeistereien</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7730</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Hafenmeistereien</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7740</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Bauhöfe</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7750</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Fuhrparks</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7760</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Feuerwehren / Rettungswachen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7770</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>THW-Höfe</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7780</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Katastrophenschutzzentren</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7800</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Zentrale Wirtschaftsgebäude / Zentr. Ver. u. Entsorgung</SimpleValue>
+			</Value>
+			<Value ColumnRef="Beispiel">
+				<SimpleValue>Krankenhäuser, Bundeswehr, Polizei</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7810</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Zentrale Wirtschaftsgebäude (mehrere Funktionen)</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7820</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Zentralapotheken</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7830</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Zentralküchen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7840</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Zentralwäschereien</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7850</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Zentrale Materialgutversorgung / Logistik</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7860</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Zentralsterilisation</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>7900</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Gründer- und Technologiezentren</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>8000</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Technik</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>8100</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Kraftwerke (Gesamtanl. f. Energieversorgung)</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>8110</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Kohlekraftwerke</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>8120</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Ölkraftwerke</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>8130</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Gaskraftwerke</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>8140</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Wasserkraftwerke</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>8150</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Solarkraftwerke</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>8160</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Windkraftwerke</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>8170</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Biogaskraftwerke</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>8200</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Bauwerke für Lenkung, Steuerung, Überwachung und Nachrichtenübermittlung</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>8210</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Betriebsgebäude für öffentl. Bereitschaftsdienste</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>8220</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Funkstationen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>8230</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Vermittlungsgebäude</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>8240</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Stellwerke</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>8250</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Wetterstationen, Wetterwarten, Sturmwarnanlagen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>8260</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Waagehäuser</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>8270</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Pförtnerhäuser</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>8280</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Tunnelbetriebsgebäude</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>8290</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Turmartige Gebäude</SimpleValue>
+			</Value>
+			<Value ColumnRef="Beispiel">
+				<SimpleValue>Kontrollturm / Leuchtturm, Funkmast / -turm</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>8300</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Bauwerke für Versorgung mit elektrischer Energie, Wärme, Kälte, Gas und Öl</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>8310</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Heizzentralen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>8320</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Trafostationen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>8330</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Turbinenhäuser</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>8340</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Verteilerhäuser</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>8350</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Ladestationen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>8360</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Akkumulatorenhäuser</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>8370</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Gasstationen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>8380</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Tankstellen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>8400</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Bauwerke und Anlagen für die Versorgung mit Wasser</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>8410</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Brunnenhäuser</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>8420</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Tränkeanlagen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>8430</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Wasserhochbehälter</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>8440</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Wasserversorgungsanlagen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>8450</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Löschwasserbehälter</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>8460</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Wasserbehälter unterirdisch</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>8470</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Pumpstationen (Frischwasser)</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>8500</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Bauwerke und Anlagen für die Abwasserbehandlung (Schmutz- und Regenwasser)</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>8510</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Abwasseranlagen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>8520</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Pumpstationen (Abwasser)</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>8530</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Kläranlagen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>8600</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Bauwerke für die Abfallbehandlung</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>8610</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Müllverbrennungsanlagen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>8620</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Abfallbunker, Müllhäuser, Recyclinghöfe</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>8630</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Müllaufbereitungsanlagen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>8640</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Sondermüllbehandlung</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>9000</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Sonstiges und Ausland</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>9100</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Gebäude für Verkehrsanlagen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>9110</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Flughafengebäude</SimpleValue>
+			</Value>
+			<Value ColumnRef="Beispiel">
+				<SimpleValue>Empfangs- u. Abfertigungsgebäude</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>9120</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Bahnhofsgebäude</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>9130</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Busbahnhofsgebäude</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>9140</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Autobahnraststätten</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>9150</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Schiffterminals</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>9200</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Wachgebäude</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>9210</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Torwachen, Wachgebäude</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>9220</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Wachtürme</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>9300</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Friedhofsgebäude</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>9310</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Aussegnungshallen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>9320</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Krematorien</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>9330</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Leichenhäuser</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>9340</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Urnenhäuser</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>9400</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Schutzbauwerke, Einfriedungen, Sonderbauwerke</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>9410</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Befestigungsanlagen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>9420</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Bunker</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>9430</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Umwehrungsmauern / -zäune</SimpleValue>
+			</Value>
+			<Value ColumnRef="Beispiel">
+				<SimpleValue>JVA</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>9440</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Lärmschutzwälle / -wände</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>9450</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Zaunanlagen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>9460</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Leitungskanäle / Unterirdische Verbindungsbauten</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>9500</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Bauwerke in Außenanlagen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>9510</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Baukonstruktionen in Außenanlagen</SimpleValue>
+			</Value>
+			<Value ColumnRef="Beispiel">
+				<SimpleValue>Pergolen, Überdachungen, Pavillons, Verbindungsgänge, Mauern / Einfriedungen, Rampen, Freitreppen, Brücken, Stege, Gehege, Wege / Plätze</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>9520</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>WC-Anlagen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>9600</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Wasserbauten, Hafenanlagen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>9610</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Schiffsstege</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>9620</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Schleusen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>9630</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Kaianlagen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>9640</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Hochwasserschutzanlagen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>9650</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Trockendock</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>9660</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Schwimmdock</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>9700</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Zivile Gebäude im Ausland</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>9710</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Auslandsvertretungen des AA (Botschaften, Generalkonsulate, Bo.-Außenstellen)</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>9711</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Kanzlei/Generalkonsulate (mit RK-/Visastelle) u. Residenz</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>9712</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Kanzlei/Generalkonsulate (mit RK-/Visastelle)</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>9713</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>RK-/Visastelle - separat von Kanzlei</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>9720</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Deutsche Forschungs-Institutionen im Ausland</SimpleValue>
+			</Value>
+			<Value ColumnRef="Beispiel">
+				<SimpleValue>Deutsche Archäologische Institute, Kulturinstitute (Bürogeb. mit Bibliothek)</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>9730</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Auslandsschulen</SimpleValue>
+			</Value>
+			<Value ColumnRef="Beispiel">
+				<SimpleValue>Deutsche Schulen im Ausland</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>9740</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Kindergärten im Ausland</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>9750</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Bildungseinrichtungen f. Erwachsene im Ausland</SimpleValue>
+			</Value>
+			<Value ColumnRef="Beispiel">
+				<SimpleValue>Goethe-Institute</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>9760</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Dienstwohnungen / Residenz (Gebäude) im Ausland</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>9761</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Dienstwohnungen / Residenz (B6)</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>9762</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Dienstwohnungen / Residenz (B3)</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>9763</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Dienstwohnungen allgemein</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>9770</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Außenwache (bei Auslandsvertretungen des AA)</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>9771</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>mit KFZ-Schleusen-Anlage</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>9772</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>ohne KFZ-Schleusen-Anlage</SimpleValue>
+			</Value>
+			<Value ColumnRef="Beispiel">
+				<SimpleValue>Rettungszentren, Einsatzlazarette</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>9800</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Gebäude der Bundeswehr im Ausland</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>9810</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Gebäude mit büroartiger Nutzung</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>9820</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Gebäude f. wissensch. Lehre u. Forschung</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>9830</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Gebäude des Gesundheitswesens</SimpleValue>
+			</Value>
+			<Value ColumnRef="Beispiel">
+				<SimpleValue>Rettungszentren, Einsatzlazarette</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>9840</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Gebäude für Bildung und Kultur</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>9850</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Sportbauten</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>9860</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Wohnen, Beherbergen, Pflegen</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>9870</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Gebäude für Lagerung, Verteilung, Wartung und Pflege</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>9880</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>Bauwerke für technische Zwecke</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="SCHLUESSEL">
+				<SimpleValue>9890</SimpleValue>
+			</Value>
+			<Value ColumnRef="Bezeichnung">
+				<SimpleValue>sonstige Gebäude</SimpleValue>
+			</Value>
+		</Row>
+	</SimpleCodeList>
+</gc:CodeList>

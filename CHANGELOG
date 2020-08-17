@@ -1,0 +1,15 @@
+# 2020.2.1
+
+* Auswahl der nachträgliche Übernahme des Projektnordens angepasst
+* Datenübernahme für XBau bzgl Modellierungsrichtlinie angepasst
+* Adopt OpenJDK 13 und OpenJFX 13 konformer Code
+* Partielles Update auf Apstex IFC Libs v4.5 (ohne ifctoolbox)
+
+# 2019.12.3
+* Datenextraktion angepasst auf Modellierungsrichtlinie Stand 27.11.2019
+* Gruppierte Modellextraktion
+* Möglichkeit, Selections Sets zu erstellen
+* Möglichkeit, Farbschemata für Selection Sets zu erstellen
+* Möglichkeit der Ausrichtung des Modells anhand des TrueNorth-Winkels (IFC)
+* Prüfung der Baugrenzen auf Basis des BPlan
+* Extraktion überbauter, bebauter und unterbauter Grundstücksfläche

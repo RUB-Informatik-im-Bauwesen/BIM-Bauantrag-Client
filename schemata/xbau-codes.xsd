@@ -1,0 +1,3532 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xbau="http://www.xleitstelle.de/xbau/schema/2/1/" xmlns:xoev-code="http://xoev.de/schemata/code/1_0" targetNamespace="http://www.xleitstelle.de/xbau/schema/2/1/" version="2.1" elementFormDefault="qualified" attributeFormDefault="unqualified">
+  <xs:annotation>
+    <xs:appinfo>
+      <standard>
+        <nameLang>XBau - Standard für die Datenkommunikation der Bauaufsichtsbehörde</nameLang>
+        <nameKurz>XBau</nameKurz>
+        <nameTechnisch>xbau</nameTechnisch>
+        <kennung>urn:xoev-de:bmk:standard:xbau</kennung>
+        <beschreibung>XBau ist der XÖV-Standard für den Datenaustausch der Bauaufsichtsbehörden mit ihren Kommunikationspartnern (Bauherren, Architektenbüros, Behörden zahlreicher Rechtsbereiche).</beschreibung>
+      </standard>
+      <versionStandard>
+        <version>2.1</version>
+        <beschreibung>In vielen Teilen überarbeitete und erweiterte produktionsreife Fassung des Standards XBau. Auf der Basis des Baurechts des Bundes und der Länder und eng am Bedarf der Praxis der Behörden entwickelt. Erweiterungen und Verbesserungen befinden sich in der Planung auch für die Zukunft.</beschreibung>
+        <versionXOEVHandbuch>2.1.0</versionXOEVHandbuch>
+        <versionXGenerator>2.6.1</versionXGenerator>
+        <versionModellierungswerkzeug>18.0</versionModellierungswerkzeug>
+        <nameModellierungswerkzeug>MagicDraw</nameModellierungswerkzeug>
+      </versionStandard>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:import schemaLocation="http://xoev.de/schemata/code/1_0/xoev-code.xsd" namespace="http://xoev.de/schemata/code/1_0" />
+  <xs:complexType name="Code.AbweichungArt">
+    <xs:annotation>
+      <xs:appinfo>
+        <codeliste>
+          <nameLang>Abweichung Art</nameLang>
+          <nameKurz>Abweichung Art</nameKurz>
+          <nameTechnisch>abweichungart</nameTechnisch>
+          <kennung>urn:xoev-de:xbau:codeliste:abweichungart</kennung>
+          <beschreibung>Definition der Arten von beantragten oder genehmigten Abweichungen eines Bauvorhabens von den Rechtsnormen.</beschreibung>
+          <herausgebernameLang>Bauministerkonferenz</herausgebernameLang>
+          <herausgebernameKurz>BMK</herausgebernameKurz>
+        </codeliste>
+        <versionCodeliste>
+          <version>1.0</version>
+          <versionXOEVHandbuch>2.1.0</versionXOEVHandbuch>
+        </versionCodeliste>
+      </xs:appinfo>
+      <xs:documentation>Definition der Arten von beantragten oder genehmigten Abweichungen eines Bauvorhabens von den Rechtsnormen.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="xoev-code:Code">
+        <xs:sequence>
+          <xs:element name="code" type="xbau:Codelist.AbweichungArt" form="unqualified">
+            <xs:annotation>
+              <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+              <xs:documentation>In diesem XML-Element wird der Code einer Codeliste übermittelt.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="listURI" type="xs:anyURI" use="optional" fixed="urn:xoev-de:xbau:codeliste:abweichungart">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Mit diesem XML-Attribut wird die Kennung der Codeliste übermittelt, in deren Kontext der jeweilige Code zu interpretieren ist. Die Kennung identifiziert die Codeliste, nicht jedoch deren Version eindeutig.
+
+Wird bereits im Rahmen des XÖV-Standards eine Kennung vorgegeben (es handelt sich in diesem Fall um einen Code-Typ 1, 2 oder 3) darf auf eine nochmalige Angabe der Kennung bei der Übermittlung eines Codes verzichtet werden. Aus diesem Grund ist das XML-Attribut listURI zunächst als optional deklariert.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="listVersionID" type="xs:normalizedString" use="optional" fixed="1.0">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Die konkrete Version der zu nutzenden Codeliste wird mit diesem XML-Attribut übertragen.
+
+Analog zum listURI ist die Bestimmung der Version einer Codeliste bei der Übertragung eines Codes zwingend. Die Version kann jedoch ebenfalls bereits im XÖV-Standard festgelegt werden (es handelt sich in diesem Fall um einen Code-Typ 1 oder 2).</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Code.AmtlicherGemeindeschluessel">
+    <xs:annotation>
+      <xs:appinfo>
+        <codeliste>
+          <nameLang>Gemeinden gemäß Amtlicher Gemeindeschlüssel (AGS)</nameLang>
+          <nameKurz>AGS</nameKurz>
+          <nameTechnisch>ags</nameTechnisch>
+          <kennung>urn:de:bund:destatis:bevoelkerungsstatistik:schluessel:ags</kennung>
+          <beschreibung>Diese Codeliste stellt alle Gemeinden Deutschlands durch den Amtlichen Gemeindeschlüssel (AGS) dar, wie im Gemeindeverzeichnis des Statistischen Bundesamtes enthalten.</beschreibung>
+          <herausgebernameLang>Statistisches Bundesamt, Wiesbaden</herausgebernameLang>
+          <herausgebernameKurz>Destatis</herausgebernameKurz>
+        </codeliste>
+      </xs:appinfo>
+      <xs:documentation>Diese Codeliste stellt alle Gemeinden Deutschlands durch den Amtlichen Gemeindeschlüssel (AGS) dar, wie im Gemeindeverzeichnis des Statistischen Bundesamtes enthalten. 
+
+Die Codeliste ist im XRepository (www.xrepository.de) unter Nennung ihrer Codelisten-URI auffindbar und kann von dort im XML-Format OASIS Genericode abgerufen werden.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="xoev-code:Code">
+        <xs:sequence>
+          <xs:element name="code" type="xs:token" form="unqualified">
+            <xs:annotation>
+              <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+              <xs:documentation>In diesem XML-Element wird der Code einer Codeliste übermittelt.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="listURI" type="xs:anyURI" use="optional" fixed="urn:de:bund:destatis:bevoelkerungsstatistik:schluessel:ags">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Mit diesem XML-Attribut wird die Kennung der Codeliste übermittelt, in deren Kontext der jeweilige Code zu interpretieren ist. Die Kennung identifiziert die Codeliste, nicht jedoch deren Version eindeutig.
+
+Wird bereits im Rahmen des XÖV-Standards eine Kennung vorgegeben (es handelt sich in diesem Fall um einen Code-Typ 1, 2 oder 3) darf auf eine nochmalige Angabe der Kennung bei der Übermittlung eines Codes verzichtet werden. Aus diesem Grund ist das XML-Attribut listURI zunächst als optional deklariert.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="listVersionID" type="xs:normalizedString" use="required">
+          <xs:annotation>
+            <xs:documentation>Die Version der Codeliste, welche der Interpretation des übermittelten Schlüssels zu Grunde gelegt werden soll.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Code.BaulicheAnlagenGebaeude">
+    <xs:annotation>
+      <xs:appinfo>
+        <codeliste>
+          <nameLang>BMK Bauwerkszuordnungskatalog</nameLang>
+          <nameKurz>BMK Bauwerkszuordnungskatalog</nameKurz>
+          <nameTechnisch>bauwerkszuordnungskatalog</nameTechnisch>
+          <kennung>urn:xoev-de:bmk:codeliste:bauwerkszuordnungskatalog</kennung>
+          <beschreibung>Diese Codeliste stellt die Klassifikation von Gebäuden gemäß Bauwerkszuordnungskatalog dar. Der Bauwerkszuordnungskatalog  beschreibt die Art eines Gebäudes, indem die Art seiner Nutzung angegeben wird.</beschreibung>
+          <herausgebernameLang>Bauministerkonferenz</herausgebernameLang>
+          <herausgebernameKurz>BMK</herausgebernameKurz>
+        </codeliste>
+      </xs:appinfo>
+      <xs:documentation>Diese Codeliste stellt die Klassifikation von Gebäuden gemäß Bauwerkszuordnungskatalog dar. Der Bauwerkszuordnungskatalog  beschreibt die Art eines Gebäudes, indem die Art seiner Nutzung angegeben wird.
+
+Die Codeliste ist im XRepository (www.xrepository.de) unter Nennung ihrer Codelisten-URI auffindbar und kann von dort im XML-Format OASIS Genericode abgerufen werden.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="xoev-code:Code">
+        <xs:sequence>
+          <xs:element name="code" type="xs:token" form="unqualified">
+            <xs:annotation>
+              <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+              <xs:documentation>In diesem XML-Element wird der Code einer Codeliste übermittelt.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="listURI" type="xs:anyURI" use="optional" fixed="urn:xoev-de:bmk:codeliste:bauwerkszuordnungskatalog">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Mit diesem XML-Attribut wird die Kennung der Codeliste übermittelt, in deren Kontext der jeweilige Code zu interpretieren ist. Die Kennung identifiziert die Codeliste, nicht jedoch deren Version eindeutig.
+
+Wird bereits im Rahmen des XÖV-Standards eine Kennung vorgegeben (es handelt sich in diesem Fall um einen Code-Typ 1, 2 oder 3) darf auf eine nochmalige Angabe der Kennung bei der Übermittlung eines Codes verzichtet werden. Aus diesem Grund ist das XML-Attribut listURI zunächst als optional deklariert.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="listVersionID" type="xs:normalizedString" use="required">
+          <xs:annotation>
+            <xs:documentation>Die Version der Codeliste, welche der Interpretation des übermittelten Schlüssels zu Grunde gelegt werden soll.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Code.BaulicheAnlagenSonstige">
+    <xs:annotation>
+      <xs:documentation>Dieser Code-Typ steht für eine Klassifikation der baulichen Anlagen, die nicht Gebäude sind. 
+
+In diesen Typ  ist eine auszuwählende bzw. selbst zu definierende Codeliste einzubinden, die eine solche Klassifikation bietet. Im Anwendungskontext sind in die Attribute des vorliegenden Typs die Codelisten-URI und die Nummer der Version der ausgewählten Codeliste (in die XBau-Nachrichteninstanzen) einzutragen.
+
+Als Muster wurde eine passende Codeliste definiert und als Angebot zur Einbindung für diesen Typ  bereitgestellt. Diese Codeliste kann auf Antrag erweitert bzw. geändert werden. Sie ist  im XRepository (www.xrepository.de) unter der Codelisten-URI urn:xoev-de:xbau:codeliste:baulicheanlagen.sonstige  auffindbar und kann von dort im XML-Format OASIS Genericode abgerufen werden.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="xoev-code:Code">
+        <xs:sequence>
+          <xs:element name="code" type="xs:token" form="unqualified">
+            <xs:annotation>
+              <xs:documentation>In diesem Element ist ein Schlüssel aus der referenzierten Codeliste einzutragen.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="listURI" type="xs:anyURI" use="required">
+          <xs:annotation>
+            <xs:documentation>Hier ist die URI einer Codeliste einzutragen, die dadurch hier eingebunden ist. Es ist die Codeliste dafür auszuwählen, auf deren Basis der übermittelte Schlüssel durch den Leser der Nachricht interpretiert werden soll.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="listVersionID" type="xs:normalizedString" use="required">
+          <xs:annotation>
+            <xs:documentation>Die Version der Codeliste, welche der Interpretation des übermittelten Schlüssels zu Grunde gelegt werden soll.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Code.BaumassnahmeArt">
+    <xs:annotation>
+      <xs:appinfo>
+        <codeliste>
+          <nameLang>Baumaßnahme Art</nameLang>
+          <nameKurz>Baumaßnahme Art</nameKurz>
+          <nameTechnisch>baumassnahme</nameTechnisch>
+          <kennung>urn:xoev-de:xbau:codeliste:baumassnahme</kennung>
+          <beschreibung>Diese Codeliste enthält die Einteilung, von welcher grundsätzlichen Art die  Maßnahmen im Rahmen eines Bauvorhabens sein können.</beschreibung>
+          <herausgebernameLang>Bauministerkonferenz</herausgebernameLang>
+          <herausgebernameKurz>BMK</herausgebernameKurz>
+        </codeliste>
+        <versionCodeliste>
+          <version>1.0</version>
+          <versionXOEVHandbuch>2.1.0</versionXOEVHandbuch>
+        </versionCodeliste>
+      </xs:appinfo>
+      <xs:documentation>Diese Codeliste enthält die Einteilung, von welcher grundsätzlichen Art die  Maßnahmen im Rahmen eines Bauvorhabens sein können.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="xoev-code:Code">
+        <xs:sequence>
+          <xs:element name="code" type="xbau:Codelist.Baumassnahme" form="unqualified">
+            <xs:annotation>
+              <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+              <xs:documentation>In diesem XML-Element wird der Code einer Codeliste übermittelt.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="listURI" type="xs:anyURI" use="optional" fixed="urn:xoev-de:xbau:codeliste:baumassnahme">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Mit diesem XML-Attribut wird die Kennung der Codeliste übermittelt, in deren Kontext der jeweilige Code zu interpretieren ist. Die Kennung identifiziert die Codeliste, nicht jedoch deren Version eindeutig.
+
+Wird bereits im Rahmen des XÖV-Standards eine Kennung vorgegeben (es handelt sich in diesem Fall um einen Code-Typ 1, 2 oder 3) darf auf eine nochmalige Angabe der Kennung bei der Übermittlung eines Codes verzichtet werden. Aus diesem Grund ist das XML-Attribut listURI zunächst als optional deklariert.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="listVersionID" type="xs:normalizedString" use="optional" fixed="1.0">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Die konkrete Version der zu nutzenden Codeliste wird mit diesem XML-Attribut übertragen.
+
+Analog zum listURI ist die Bestimmung der Version einer Codeliste bei der Übertragung eines Codes zwingend. Die Version kann jedoch ebenfalls bereits im XÖV-Standard festgelegt werden (es handelt sich in diesem Fall um einen Code-Typ 1 oder 2).</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Code.BautechnischerNachweisArt">
+    <xs:annotation>
+      <xs:appinfo>
+        <codeliste>
+          <nameLang>Bautechnischer Nachweis Art</nameLang>
+          <nameKurz>Bautechnischer Nachweis Art</nameKurz>
+          <nameTechnisch>bautechnischernachweisart</nameTechnisch>
+          <kennung>urn:xoev-de:xbau:codeliste:bautechnischernachweisart</kennung>
+          <beschreibung>Art eines bautechnischen Nachweises, der zu den Planungsunterlagen eines Bauvorhabens nach § 66 MBO gehören kann.</beschreibung>
+          <herausgebernameLang>Bauministerkonferenz</herausgebernameLang>
+          <herausgebernameKurz>BMK</herausgebernameKurz>
+        </codeliste>
+        <versionCodeliste>
+          <version>1.0</version>
+          <versionXOEVHandbuch>2.1.0</versionXOEVHandbuch>
+        </versionCodeliste>
+      </xs:appinfo>
+      <xs:documentation>Art eines bautechnischen Nachweises, der zu den Planungsunterlagen eines Bauvorhabens nach § 66 MBO gehören kann.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="xoev-code:Code">
+        <xs:sequence>
+          <xs:element name="code" type="xbau:Codelist.BautechnischerNachweisArt" form="unqualified">
+            <xs:annotation>
+              <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+              <xs:documentation>In diesem XML-Element wird der Code einer Codeliste übermittelt.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="listURI" type="xs:anyURI" use="optional" fixed="urn:xoev-de:xbau:codeliste:bautechnischernachweisart">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Mit diesem XML-Attribut wird die Kennung der Codeliste übermittelt, in deren Kontext der jeweilige Code zu interpretieren ist. Die Kennung identifiziert die Codeliste, nicht jedoch deren Version eindeutig.
+
+Wird bereits im Rahmen des XÖV-Standards eine Kennung vorgegeben (es handelt sich in diesem Fall um einen Code-Typ 1, 2 oder 3) darf auf eine nochmalige Angabe der Kennung bei der Übermittlung eines Codes verzichtet werden. Aus diesem Grund ist das XML-Attribut listURI zunächst als optional deklariert.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="listVersionID" type="xs:normalizedString" use="optional" fixed="1.0">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Die konkrete Version der zu nutzenden Codeliste wird mit diesem XML-Attribut übertragen.
+
+Analog zum listURI ist die Bestimmung der Version einer Codeliste bei der Übertragung eines Codes zwingend. Die Version kann jedoch ebenfalls bereits im XÖV-Standard festgelegt werden (es handelt sich in diesem Fall um einen Code-Typ 1 oder 2).</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Code.BauvorlageberechtigungSachverhalt">
+    <xs:annotation>
+      <xs:appinfo>
+        <codeliste>
+          <nameLang>Bauvorlageberechtigung Sachverhalt</nameLang>
+          <nameKurz>Bauvorlageberechtigung Sachverhalt</nameKurz>
+          <nameTechnisch>bauvorlageberechtigungsachverhalt</nameTechnisch>
+          <kennung>urn:xoev-de:xbau:codeliste:bauvorlageberechtigungsachverhalt</kennung>
+          <beschreibung>Diese Codeliste nennt die gemäß § 65 Abs. 2 MBO definierten Sachverhalte, aufgrund derer eine Person bauvorlageberechtigt sein kann.</beschreibung>
+          <herausgebernameLang>Bauministerkonferenz</herausgebernameLang>
+          <herausgebernameKurz>BMK</herausgebernameKurz>
+        </codeliste>
+        <versionCodeliste>
+          <version>1.0</version>
+          <versionXOEVHandbuch>2.1.0</versionXOEVHandbuch>
+        </versionCodeliste>
+      </xs:appinfo>
+      <xs:documentation>Diese Codeliste nennt die gemäß § 65 Abs. 2 MBO definierten Sachverhalte, aufgrund derer eine Person bauvorlageberechtigt sein kann.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="xoev-code:Code">
+        <xs:sequence>
+          <xs:element name="code" type="xbau:Codelist.BauvorlageberechtigungSachverhalt" form="unqualified">
+            <xs:annotation>
+              <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+              <xs:documentation>In diesem XML-Element wird der Code einer Codeliste übermittelt.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="listURI" type="xs:anyURI" use="optional" fixed="urn:xoev-de:xbau:codeliste:bauvorlageberechtigungsachverhalt">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Mit diesem XML-Attribut wird die Kennung der Codeliste übermittelt, in deren Kontext der jeweilige Code zu interpretieren ist. Die Kennung identifiziert die Codeliste, nicht jedoch deren Version eindeutig.
+
+Wird bereits im Rahmen des XÖV-Standards eine Kennung vorgegeben (es handelt sich in diesem Fall um einen Code-Typ 1, 2 oder 3) darf auf eine nochmalige Angabe der Kennung bei der Übermittlung eines Codes verzichtet werden. Aus diesem Grund ist das XML-Attribut listURI zunächst als optional deklariert.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="listVersionID" type="xs:normalizedString" use="optional" fixed="1.0">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Die konkrete Version der zu nutzenden Codeliste wird mit diesem XML-Attribut übertragen.
+
+Analog zum listURI ist die Bestimmung der Version einer Codeliste bei der Übertragung eines Codes zwingend. Die Version kann jedoch ebenfalls bereits im XÖV-Standard festgelegt werden (es handelt sich in diesem Fall um einen Code-Typ 1 oder 2).</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Code.Bauweise">
+    <xs:annotation>
+      <xs:appinfo>
+        <codeliste>
+          <nameLang>Bauweise nach BauNVO</nameLang>
+          <nameKurz>Bauweise nach BauNVO</nameKurz>
+          <nameTechnisch>bauweise</nameTechnisch>
+          <kennung>urn:xoev-de:xbau:codeliste:bauweise</kennung>
+          <beschreibung>Angabe zur Bauweise nach §22 BauNVO</beschreibung>
+          <herausgebernameLang>Bauministerkonferenz</herausgebernameLang>
+          <herausgebernameKurz>BMK</herausgebernameKurz>
+        </codeliste>
+        <versionCodeliste>
+          <version>1.0</version>
+          <versionXOEVHandbuch>2.1.0</versionXOEVHandbuch>
+        </versionCodeliste>
+      </xs:appinfo>
+      <xs:documentation>Angabe zur Bauweise nach §22 BauNVO</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="xoev-code:Code">
+        <xs:sequence>
+          <xs:element name="code" type="xbau:Codelist.Bauweise" form="unqualified">
+            <xs:annotation>
+              <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+              <xs:documentation>In diesem XML-Element wird der Code einer Codeliste übermittelt.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="listURI" type="xs:anyURI" use="optional" fixed="urn:xoev-de:xbau:codeliste:bauweise">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Mit diesem XML-Attribut wird die Kennung der Codeliste übermittelt, in deren Kontext der jeweilige Code zu interpretieren ist. Die Kennung identifiziert die Codeliste, nicht jedoch deren Version eindeutig.
+
+Wird bereits im Rahmen des XÖV-Standards eine Kennung vorgegeben (es handelt sich in diesem Fall um einen Code-Typ 1, 2 oder 3) darf auf eine nochmalige Angabe der Kennung bei der Übermittlung eines Codes verzichtet werden. Aus diesem Grund ist das XML-Attribut listURI zunächst als optional deklariert.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="listVersionID" type="xs:normalizedString" use="optional" fixed="1.0">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Die konkrete Version der zu nutzenden Codeliste wird mit diesem XML-Attribut übertragen.
+
+Analog zum listURI ist die Bestimmung der Version einer Codeliste bei der Übertragung eines Codes zwingend. Die Version kann jedoch ebenfalls bereits im XÖV-Standard festgelegt werden (es handelt sich in diesem Fall um einen Code-Typ 1 oder 2).</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Code.BauwerteGebaeudeartenPPVO">
+    <xs:annotation>
+      <xs:documentation>Dieser Code-Typ steht für die Gebäudearten mit den entsprechenden relativen Bauwerten gemäß zutreffender Verordnung für die Prüfingenieure und Prüfsachverständige. Diese Gebäudearten werden für die Berechnung von Gebühren verwendet.
+
+In diesen Typ  ist eine auszuwählende bzw. selbst zu definierende Codeliste einzubinden, die eine solche Klassifikation bietet. Im Anwendungskontext sind in die Attribute des vorliegenden Typs die Codelisten-URI und die Nummer der Version der ausgewählten Codeliste (in die XBau-Nachrichteninstanzen) einzutragen.
+
+Als Muster wurde eine passende Codeliste definiert und als Angebot zur Einbindung für diesen Typ  bereitgestellt. Diese Codeliste kann auf Antrag erweitert bzw. geändert werden. Sie ist  im XRepository (www.xrepository.de) unter der Codelisten-URI urn:xoev-de:xbau:codeliste:bauwerte.gebaeudearten  auffindbar und kann von dort im XML-Format OASIS Genericode abgerufen werden.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="xoev-code:Code">
+        <xs:sequence>
+          <xs:element name="code" type="xs:token" form="unqualified">
+            <xs:annotation>
+              <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+              <xs:documentation>In diesem XML-Element wird der Code einer Codeliste übermittelt.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="listURI" type="xs:anyURI" use="required">
+          <xs:annotation>
+            <xs:documentation>Hier ist die URI einer Codeliste einzutragen, die dadurch hier eingebunden ist. Es ist die Codeliste dafür auszuwählen, auf deren Basis der übermittelte Schlüssel durch den Leser der Nachricht interpretiert werden soll.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="listVersionID" type="xs:normalizedString" use="required">
+          <xs:annotation>
+            <xs:documentation>Die Version der Codeliste, welche der Interpretation des übermittelten Schlüssels zu Grunde gelegt werden soll.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Code.BauwerteZuschlaegePPVO">
+    <xs:annotation>
+      <xs:documentation>Dieser Code-Typ steht für die Zuschläge, die bei der Berechnung der anrechenbaren Bauwerte zu berücksichtigen sind, gemäß zutreffender Verordnung für die Prüfingenieure und Prüfsachverständige. 
+
+In diesen Typ  ist eine auszuwählende bzw. selbst zu definierende Codeliste einzubinden, die eine solche Klassifikation bietet. Im Anwendungskontext sind in die Attribute des vorliegenden Typs die Codelisten-URI und die Nummer der Version der ausgewählten Codeliste (in die XBau-Nachrichteninstanzen) einzutragen.
+
+Als Muster wurde eine passende Codeliste definiert und als Angebot zur Einbindung für diesen Typ  bereitgestellt. Diese Codeliste kann auf Antrag erweitert bzw. geändert werden. Sie ist  im XRepository (www.xrepository.de) unter der Codelisten-URI urn:xoev-de:xbau:codeliste:bauwerte.zuschlaege.ppvo  auffindbar und kann von dort im XML-Format OASIS Genericode abgerufen werden.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="xoev-code:Code">
+        <xs:sequence>
+          <xs:element name="code" type="xs:token" form="unqualified">
+            <xs:annotation>
+              <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+              <xs:documentation>In diesem XML-Element wird der Code einer Codeliste übermittelt.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="listURI" type="xs:anyURI" use="required">
+          <xs:annotation>
+            <xs:documentation>Hier ist die URI einer Codeliste einzutragen, die dadurch hier eingebunden ist. Es ist die Codeliste dafür auszuwählen, auf deren Basis der übermittelte Schlüssel durch den Leser der Nachricht interpretiert werden soll.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="listVersionID" type="xs:normalizedString" use="required">
+          <xs:annotation>
+            <xs:documentation>Die Version der Codeliste, welche der Interpretation des übermittelten Schlüssels zu Grunde gelegt werden soll.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Code.BenachrichtigungAnlass">
+    <xs:annotation>
+      <xs:documentation>Anlässe für die Benachrichtigung von Dritten über Verfahrensstände und Ergebnisse von Prozessen der Bauaufsichtsbehörde.
+
+In diesen Typ  ist eine auszuwählende bzw. selbst zu definierende Codeliste einzubinden, die eine solche Klassifikation bietet. Im Anwendungskontext sind in die Attribute des vorliegenden Typs die Codelisten-URI und die Nummer der Version der ausgewählten Codeliste (in die XBau-Nachrichteninstanzen) einzutragen.
+
+Als Muster wurde die Codeliste Benachrichtigung Informationsempfänger Anlass (URI: urn:xoev-de:xbau:codeliste:benachrichtigunganlass) als Angebot zur Einbindung für diesen Typ  bereitgestellt. 
+
+Die angebotene Codeliste ist  im XRepository (www.xrepository.de) unter dem Stichwort "XBau" auffindbar und kann von dort im XML-Format OASIS Genericode abgerufen werden.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="xoev-code:Code">
+        <xs:sequence>
+          <xs:element name="code" type="xs:token" form="unqualified">
+            <xs:annotation>
+              <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+              <xs:documentation>In diesem XML-Element wird der Code einer Codeliste übermittelt.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="listURI" type="xs:anyURI" use="required">
+          <xs:annotation>
+            <xs:documentation>Hier ist die URI einer Codeliste einzutragen, die dadurch hier eingebunden ist. Es ist die Codeliste dafür auszuwählen, auf deren Basis der übermittelte Schlüssel durch den Leser der Nachricht interpretiert werden soll.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="listVersionID" type="xs:normalizedString" use="required">
+          <xs:annotation>
+            <xs:documentation>Die Version der Codeliste, welche der Interpretation des übermittelten Schlüssels zu Grunde gelegt werden soll.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Code.BeteiligungRolle">
+    <xs:annotation>
+      <xs:appinfo>
+        <codeliste>
+          <nameLang>Beteiligung Rolle</nameLang>
+          <nameKurz>Beteiligung Rolle</nameKurz>
+          <nameTechnisch>beteiligungrolle</nameTechnisch>
+          <kennung>urn:xoev-de:xbau:codeliste:beteiligungrolle</kennung>
+          <beschreibung>Benennung der Rolle einer zu beteiligenden Behörde oder Stelle als Träger öffentlicher Belange in einem Beteiligungsverfahren.</beschreibung>
+          <herausgebernameLang>Bauministerkonferenz</herausgebernameLang>
+          <herausgebernameKurz>BMK</herausgebernameKurz>
+        </codeliste>
+        <versionCodeliste>
+          <version>1.0</version>
+          <versionXOEVHandbuch>2.1.0</versionXOEVHandbuch>
+        </versionCodeliste>
+      </xs:appinfo>
+      <xs:documentation>Benennung der Rolle einer zu beteiligenden Behörde oder Stelle als Träger öffentlicher Belange in einem Beteiligungsverfahren.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="xoev-code:Code">
+        <xs:sequence>
+          <xs:element name="code" type="xbau:Codelist.BeteiligungRolle" form="unqualified">
+            <xs:annotation>
+              <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+              <xs:documentation>In diesem XML-Element wird der Code einer Codeliste übermittelt.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="listURI" type="xs:anyURI" use="optional" fixed="urn:xoev-de:xbau:codeliste:beteiligungrolle">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Mit diesem XML-Attribut wird die Kennung der Codeliste übermittelt, in deren Kontext der jeweilige Code zu interpretieren ist. Die Kennung identifiziert die Codeliste, nicht jedoch deren Version eindeutig.
+
+Wird bereits im Rahmen des XÖV-Standards eine Kennung vorgegeben (es handelt sich in diesem Fall um einen Code-Typ 1, 2 oder 3) darf auf eine nochmalige Angabe der Kennung bei der Übermittlung eines Codes verzichtet werden. Aus diesem Grund ist das XML-Attribut listURI zunächst als optional deklariert.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="listVersionID" type="xs:normalizedString" use="optional" fixed="1.0">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Die konkrete Version der zu nutzenden Codeliste wird mit diesem XML-Attribut übertragen.
+
+Analog zum listURI ist die Bestimmung der Version einer Codeliste bei der Übertragung eines Codes zwingend. Die Version kann jedoch ebenfalls bereits im XÖV-Standard festgelegt werden (es handelt sich in diesem Fall um einen Code-Typ 1 oder 2).</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Code.Bundesland">
+    <xs:annotation>
+      <xs:appinfo>
+        <codeliste>
+          <nameLang>Länder der Bundesrepublik Deutschland</nameLang>
+          <nameKurz>Bundesland</nameKurz>
+          <nameTechnisch>bundesland</nameTechnisch>
+          <kennung>urn:de:bund:destatis:bevoelkerungsstatistik:schluessel:bundesland</kennung>
+          <beschreibung>Die Bundesrepublik Deutschland ist ein Zusammenschluss von Ländern. Die meisten Bundesländer umfassen mehrere Kreise und Bezirke. Diese Codeliste stellt die deutschen Bundesländer nach dem Gemeindeverzeichnis des Statistischen Bundesamtes dar. Dieser Code ist auch Bestandteil des Amtlichen Gemeindeschlüssels (AGS).</beschreibung>
+          <herausgebernameLang>Statistisches Bundesamt, Wiesbaden</herausgebernameLang>
+          <herausgebernameKurz>Destatis</herausgebernameKurz>
+        </codeliste>
+      </xs:appinfo>
+      <xs:documentation>Diese Codeliste stellt die deutschen Bundesländer nach dem Gemeindeverzeichnis des Statistischen Bundesamtes dar. Dieser Code ist auch Bestandteil des Amtlichen Gemeindeschlüssels (AGS). 
+
+Die Codeliste ist im XRepository (www.xrepository.de) unter Nennung ihrer Codelisten-URI auffindbar und kann von dort im XML-Format OASIS Genericode abgerufen werden.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="xoev-code:Code">
+        <xs:sequence>
+          <xs:element name="code" type="xs:token" form="unqualified">
+            <xs:annotation>
+              <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+              <xs:documentation>In diesem XML-Element wird der Code einer Codeliste übermittelt.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="listURI" type="xs:anyURI" use="optional" fixed="urn:de:bund:destatis:bevoelkerungsstatistik:schluessel:bundesland">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Mit diesem XML-Attribut wird die Kennung der Codeliste übermittelt, in deren Kontext der jeweilige Code zu interpretieren ist. Die Kennung identifiziert die Codeliste, nicht jedoch deren Version eindeutig.
+
+Wird bereits im Rahmen des XÖV-Standards eine Kennung vorgegeben (es handelt sich in diesem Fall um einen Code-Typ 1, 2 oder 3) darf auf eine nochmalige Angabe der Kennung bei der Übermittlung eines Codes verzichtet werden. Aus diesem Grund ist das XML-Attribut listURI zunächst als optional deklariert.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="listVersionID" type="xs:normalizedString" use="required">
+          <xs:annotation>
+            <xs:documentation>Die Version der Codeliste, welche der Interpretation des übermittelten Schlüssels zu Grunde gelegt werden soll.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Code.ErleichterungGegenstand">
+    <xs:annotation>
+      <xs:documentation>Dieser Code-Typ steht für Arten von beantragten Erleichterungen gemäß bspw. MBO § 51  (Anforderungen und Erleichterungen für Sonderbauten). 
+
+In diesen Typ  ist eine auszuwählende bzw. selbst zu definierende Codeliste einzubinden, die eine solche Klassifikation bietet. Im Anwendungskontext sind in die Attribute des vorliegenden Typs die Codelisten-URI und die Nummer der Version der ausgewählten Codeliste (in die XBau-Nachrichteninstanzen) einzutragen.
+
+Als Muster wurden die Ziffern aus MBO § 51 (Liste von Erleichterungstatbeständen) als XÖV-konforme Codeliste dargestellt und als Angebot zur Einbindung für diesen Typ  bereitgestellt. Im Anwendungskontext können entsprechend Codelisten mit landesrechtlich angepassten Tatbeständen verwendet werden.
+
+Die angebotene Codeliste ist  im XRepository (www.xrepository.de) unter der Codelisten-URI urn:xoev-de:xbau:codeliste:erleichterung.gegenstand  auffindbar und kann von dort im XML-Format OASIS Genericode abgerufen werden.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="xoev-code:Code">
+        <xs:sequence>
+          <xs:element name="code" type="xs:token" form="unqualified">
+            <xs:annotation>
+              <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+              <xs:documentation>In diesem XML-Element wird der Code einer Codeliste übermittelt.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="listURI" type="xs:anyURI" use="required">
+          <xs:annotation>
+            <xs:documentation>Hier ist die URI einer Codeliste einzutragen, die dadurch hier eingebunden ist. Es ist die Codeliste dafür auszuwählen, auf deren Basis der übermittelte Schlüssel durch den Leser der Nachricht interpretiert werden soll.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="listVersionID" type="xs:normalizedString" use="required">
+          <xs:annotation>
+            <xs:documentation>Die Version der Codeliste, welche der Interpretation des übermittelten Schlüssels zu Grunde gelegt werden soll.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Code.Erreichbarkeit">
+    <xs:annotation>
+      <xs:appinfo>
+        <codeliste>
+          <nameLang>Erreichbarkeit</nameLang>
+          <nameKurz>Erreichbarkeit</nameKurz>
+          <nameTechnisch>erreichbarkeit</nameTechnisch>
+          <kennung>urn:de:xoev:codeliste:erreichbarkeit</kennung>
+          <beschreibung>Eine Liste der Kommunikationsmedien und -kanäle, über die man eine Person oder Institution erreichen kann.</beschreibung>
+          <herausgebernameKurz>KoSIT</herausgebernameKurz>
+        </codeliste>
+      </xs:appinfo>
+      <xs:documentation>Die von der XÖV-Koordination bereitgestellte Codeliste beschreibt die gängigen Kanäle der Kommunikation wie z. B. Telefon und E-Mail, über die eine natürliche Person erreichbar sein kann.
+
+Die Codeliste ist im XRepository (www.xrepository.de) unter Nennung ihrer Codelisten-URI auffindbar und kann von dort im XML-Format OASIS Genericode abgerufen werden.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="xoev-code:Code">
+        <xs:sequence>
+          <xs:element name="code" type="xs:token" form="unqualified">
+            <xs:annotation>
+              <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+              <xs:documentation>In diesem XML-Element wird der Code einer Codeliste übermittelt.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="listURI" type="xs:anyURI" use="optional" fixed="urn:de:xoev:codeliste:erreichbarkeit">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Mit diesem XML-Attribut wird die Kennung der Codeliste übermittelt, in deren Kontext der jeweilige Code zu interpretieren ist. Die Kennung identifiziert die Codeliste, nicht jedoch deren Version eindeutig.
+
+Wird bereits im Rahmen des XÖV-Standards eine Kennung vorgegeben (es handelt sich in diesem Fall um einen Code-Typ 1, 2 oder 3) darf auf eine nochmalige Angabe der Kennung bei der Übermittlung eines Codes verzichtet werden. Aus diesem Grund ist das XML-Attribut listURI zunächst als optional deklariert.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="listVersionID" type="xs:normalizedString" use="required">
+          <xs:annotation>
+            <xs:documentation>Die Version der Codeliste, welche der Interpretation des übermittelten Schlüssels zu Grunde gelegt werden soll.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Code.FormelleBefundeAntragArt">
+    <xs:annotation>
+      <xs:appinfo>
+        <codeliste>
+          <nameLang>Befunde formelle Prüfung Antrag</nameLang>
+          <nameKurz>Befunde formelle Prüfung Antrag</nameKurz>
+          <nameTechnisch>formellebefundeantragart</nameTechnisch>
+          <kennung>urn:xoev-de:xbau:codeliste:formellebefundeantragart</kennung>
+          <beschreibung>In dieser Codeliste sind Kategorien von Befunden einer formellen Prüfung notiert. Es geht hier um Befundlisten, die das Ergebnis der formellen Prüfung eines Bauantrags, Abweichungsantrags, Vorbescheidsantrags, Prüfauftrags (bautechnische Nachweise) oder einer vorgelegten Baulasterklärung sind.</beschreibung>
+          <herausgebernameLang>Bauministerkonferenz</herausgebernameLang>
+          <herausgebernameKurz>BMK</herausgebernameKurz>
+        </codeliste>
+        <versionCodeliste>
+          <version>1.0</version>
+          <versionXOEVHandbuch>2.1.0</versionXOEVHandbuch>
+        </versionCodeliste>
+      </xs:appinfo>
+      <xs:documentation>In dieser Codeliste sind Kategorien von Befunden einer formellen Prüfung notiert. Es geht hier um Befundlisten, die das Ergebnis der formellen Prüfung eines Bauantrags, Abweichungsantrags, Vorbescheidsantrags, Prüfauftrags (bautechnische Nachweise) oder einer vorgelegten Baulasterklärung sind.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="xoev-code:Code">
+        <xs:sequence>
+          <xs:element name="code" type="xbau:Codelist.FormelleBefundeAntrag" form="unqualified">
+            <xs:annotation>
+              <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+              <xs:documentation>In diesem XML-Element wird der Code einer Codeliste übermittelt.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="listURI" type="xs:anyURI" use="optional" fixed="urn:xoev-de:xbau:codeliste:formellebefundeantragart">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Mit diesem XML-Attribut wird die Kennung der Codeliste übermittelt, in deren Kontext der jeweilige Code zu interpretieren ist. Die Kennung identifiziert die Codeliste, nicht jedoch deren Version eindeutig.
+
+Wird bereits im Rahmen des XÖV-Standards eine Kennung vorgegeben (es handelt sich in diesem Fall um einen Code-Typ 1, 2 oder 3) darf auf eine nochmalige Angabe der Kennung bei der Übermittlung eines Codes verzichtet werden. Aus diesem Grund ist das XML-Attribut listURI zunächst als optional deklariert.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="listVersionID" type="xs:normalizedString" use="optional" fixed="1.0">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Die konkrete Version der zu nutzenden Codeliste wird mit diesem XML-Attribut übertragen.
+
+Analog zum listURI ist die Bestimmung der Version einer Codeliste bei der Übertragung eines Codes zwingend. Die Version kann jedoch ebenfalls bereits im XÖV-Standard festgelegt werden (es handelt sich in diesem Fall um einen Code-Typ 1 oder 2).</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Code.FormelleBefundeArt">
+    <xs:annotation>
+      <xs:documentation>Arten von Befunden einer universell einsetzbaren Befundliste für die formelle Prüfung von Anträgen, Anzeigen und Erklärungen.
+
+In diesen Typ  ist eine auszuwählende bzw. selbst zu definierende Codeliste einzubinden, die eine solche Klassifikation bietet. Im Anwendungskontext sind in die Attribute des vorliegenden Typs die Codelisten-URI und die Nummer der Version der ausgewählten Codeliste (in die XBau-Nachrichteninstanzen) einzutragen.
+
+Als Muster wurde die Codeliste Befunde einer formellen Prüfung (URI: urn:xoev-de:xbau:codeliste:formellebefundeart) als Angebot zur Einbindung für diesen Typ  bereitgestellt. 
+
+Die angebotene Codeliste ist  im XRepository (www.xrepository.de) unter dem Stichwort "XBau" auffindbar und kann von dort im XML-Format OASIS Genericode abgerufen werden.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="xoev-code:Code">
+        <xs:sequence>
+          <xs:element name="code" type="xs:token" form="unqualified">
+            <xs:annotation>
+              <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+              <xs:documentation>In diesem XML-Element wird der Code einer Codeliste übermittelt.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="listURI" type="xs:anyURI" use="required">
+          <xs:annotation>
+            <xs:documentation>Hier ist die URI einer Codeliste einzutragen, die dadurch hier eingebunden ist. Es ist die Codeliste dafür auszuwählen, auf deren Basis der übermittelte Schlüssel durch den Leser der Nachricht interpretiert werden soll.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="listVersionID" type="xs:normalizedString" use="required">
+          <xs:annotation>
+            <xs:documentation>Die Version der Codeliste, welche der Interpretation des übermittelten Schlüssels zu Grunde gelegt werden soll.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Code.Garagentyp">
+    <xs:annotation>
+      <xs:appinfo>
+        <codeliste>
+          <nameLang>MBO Garagentypen</nameLang>
+          <nameKurz>MBO Garagentypen</nameKurz>
+          <nameTechnisch>mbogaragentyp</nameTechnisch>
+          <kennung>urn:xoev-de:xbau:codeliste:mbogaragentyp</kennung>
+          <beschreibung>Garagen nach § 2 Abs. 7 MBO, konkretisiert in § 1 Abs. 8 MGarV</beschreibung>
+          <herausgebernameLang>Bauministerkonferenz</herausgebernameLang>
+          <herausgebernameKurz>BMK</herausgebernameKurz>
+        </codeliste>
+        <versionCodeliste>
+          <version>1.0</version>
+          <versionXOEVHandbuch>2.1.0</versionXOEVHandbuch>
+        </versionCodeliste>
+      </xs:appinfo>
+      <xs:documentation>Garagen nach § 2 Abs. 7 MBO, konkretisiert in § 1 Abs. 8 MGarV</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="xoev-code:Code">
+        <xs:sequence>
+          <xs:element name="code" type="xbau:Codelist.Garagentyp" form="unqualified">
+            <xs:annotation>
+              <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+              <xs:documentation>In diesem XML-Element wird der Code einer Codeliste übermittelt.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="listURI" type="xs:anyURI" use="optional" fixed="urn:xoev-de:xbau:codeliste:mbogaragentyp">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Mit diesem XML-Attribut wird die Kennung der Codeliste übermittelt, in deren Kontext der jeweilige Code zu interpretieren ist. Die Kennung identifiziert die Codeliste, nicht jedoch deren Version eindeutig.
+
+Wird bereits im Rahmen des XÖV-Standards eine Kennung vorgegeben (es handelt sich in diesem Fall um einen Code-Typ 1, 2 oder 3) darf auf eine nochmalige Angabe der Kennung bei der Übermittlung eines Codes verzichtet werden. Aus diesem Grund ist das XML-Attribut listURI zunächst als optional deklariert.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="listVersionID" type="xs:normalizedString" use="optional" fixed="1.0">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Die konkrete Version der zu nutzenden Codeliste wird mit diesem XML-Attribut übertragen.
+
+Analog zum listURI ist die Bestimmung der Version einer Codeliste bei der Übertragung eines Codes zwingend. Die Version kann jedoch ebenfalls bereits im XÖV-Standard festgelegt werden (es handelt sich in diesem Fall um einen Code-Typ 1 oder 2).</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Code.Genehmigungsfreistellung">
+    <xs:annotation>
+      <xs:appinfo>
+        <codeliste>
+          <nameLang>Genehmigungsfreistellungsverfahren Ergebnis</nameLang>
+          <nameKurz>Genehmigungsfreistellungsverfahren Ergebnis</nameKurz>
+          <nameTechnisch>genehmigungsfreistellung</nameTechnisch>
+          <kennung>urn:xoev-de:xbau:codeliste:genehmigungsfreistellung</kennung>
+          <beschreibung>Genehmigungsfreistellungsverfahren:  Definition der möglichen Ergebnisse eines Vorgangs mit entsprechendem Bescheid an den Bauherrn.</beschreibung>
+          <herausgebernameLang>Bauministerkonferenz</herausgebernameLang>
+          <herausgebernameKurz>BMK</herausgebernameKurz>
+        </codeliste>
+        <versionCodeliste>
+          <version>1.0</version>
+          <versionXOEVHandbuch>2.1.0</versionXOEVHandbuch>
+        </versionCodeliste>
+      </xs:appinfo>
+      <xs:documentation>Genehmigungsfreistellungsverfahren:  Definition der möglichen Ergebnisse eines Vorgangs mit entsprechendem Bescheid an den Bauherrn.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="xoev-code:Code">
+        <xs:sequence>
+          <xs:element name="code" type="xbau:Codelist.Genehmigungsfreistellung" form="unqualified">
+            <xs:annotation>
+              <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+              <xs:documentation>In diesem XML-Element wird der Code einer Codeliste übermittelt.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="listURI" type="xs:anyURI" use="optional" fixed="urn:xoev-de:xbau:codeliste:genehmigungsfreistellung">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Mit diesem XML-Attribut wird die Kennung der Codeliste übermittelt, in deren Kontext der jeweilige Code zu interpretieren ist. Die Kennung identifiziert die Codeliste, nicht jedoch deren Version eindeutig.
+
+Wird bereits im Rahmen des XÖV-Standards eine Kennung vorgegeben (es handelt sich in diesem Fall um einen Code-Typ 1, 2 oder 3) darf auf eine nochmalige Angabe der Kennung bei der Übermittlung eines Codes verzichtet werden. Aus diesem Grund ist das XML-Attribut listURI zunächst als optional deklariert.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="listVersionID" type="xs:normalizedString" use="optional" fixed="1.0">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Die konkrete Version der zu nutzenden Codeliste wird mit diesem XML-Attribut übertragen.
+
+Analog zum listURI ist die Bestimmung der Version einer Codeliste bei der Übertragung eines Codes zwingend. Die Version kann jedoch ebenfalls bereits im XÖV-Standard festgelegt werden (es handelt sich in diesem Fall um einen Code-Typ 1 oder 2).</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Code.MboGebaeudeklasse">
+    <xs:annotation>
+      <xs:appinfo>
+        <codeliste>
+          <nameLang>MBO Gebäudeklassen</nameLang>
+          <nameKurz>MBO Gebäudeklassen</nameKurz>
+          <nameTechnisch>mbogebaeudeklasse</nameTechnisch>
+          <kennung>urn:xoev-de:xbau:codeliste:mbogebaeudeklasse</kennung>
+          <beschreibung>Gebäudeklassen gemäß § 2 Abs. 3 MBO</beschreibung>
+          <herausgebernameLang>Bauministerkonferenz</herausgebernameLang>
+          <herausgebernameKurz>BMK</herausgebernameKurz>
+        </codeliste>
+        <versionCodeliste>
+          <version>1.0</version>
+          <versionXOEVHandbuch>2.1.0</versionXOEVHandbuch>
+        </versionCodeliste>
+      </xs:appinfo>
+      <xs:documentation>Gebäudeklassen gemäß § 2 Abs. 3 MBO</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="xoev-code:Code">
+        <xs:sequence>
+          <xs:element name="code" type="xbau:Codelist.MboGebaeudeklasse" form="unqualified">
+            <xs:annotation>
+              <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+              <xs:documentation>In diesem XML-Element wird der Code einer Codeliste übermittelt.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="listURI" type="xs:anyURI" use="optional" fixed="urn:xoev-de:xbau:codeliste:mbogebaeudeklasse">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Mit diesem XML-Attribut wird die Kennung der Codeliste übermittelt, in deren Kontext der jeweilige Code zu interpretieren ist. Die Kennung identifiziert die Codeliste, nicht jedoch deren Version eindeutig.
+
+Wird bereits im Rahmen des XÖV-Standards eine Kennung vorgegeben (es handelt sich in diesem Fall um einen Code-Typ 1, 2 oder 3) darf auf eine nochmalige Angabe der Kennung bei der Übermittlung eines Codes verzichtet werden. Aus diesem Grund ist das XML-Attribut listURI zunächst als optional deklariert.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="listVersionID" type="xs:normalizedString" use="optional" fixed="1.0">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Die konkrete Version der zu nutzenden Codeliste wird mit diesem XML-Attribut übertragen.
+
+Analog zum listURI ist die Bestimmung der Version einer Codeliste bei der Übertragung eines Codes zwingend. Die Version kann jedoch ebenfalls bereits im XÖV-Standard festgelegt werden (es handelt sich in diesem Fall um einen Code-Typ 1 oder 2).</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Code.MppvoBauwerksklasse">
+    <xs:annotation>
+      <xs:appinfo>
+        <codeliste>
+          <nameLang>MPPVO Bauwerksklassen</nameLang>
+          <nameKurz>MPPVO Bauwerksklassen</nameKurz>
+          <nameTechnisch>mppvobauwerksklasse</nameTechnisch>
+          <kennung>urn:xoev-de:xbau:codeliste:mppvobauwerksklasse</kennung>
+          <beschreibung>Bauwerksklassen gemäß Anlage 2 zu § 27 Abs. 4 M-PPVO.</beschreibung>
+          <herausgebernameLang>Bauministerkonferenz</herausgebernameLang>
+          <herausgebernameKurz>BMK</herausgebernameKurz>
+        </codeliste>
+        <versionCodeliste>
+          <version>1.0</version>
+          <versionXOEVHandbuch>2.1.0</versionXOEVHandbuch>
+        </versionCodeliste>
+      </xs:appinfo>
+      <xs:documentation>Bauwerksklassen gemäß Anlage 2 zu § 27 Abs. 4 M-PPVO.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="xoev-code:Code">
+        <xs:sequence>
+          <xs:element name="code" type="xbau:Codelist.MppvoBauwerksklasse" form="unqualified">
+            <xs:annotation>
+              <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+              <xs:documentation>In diesem XML-Element wird der Code einer Codeliste übermittelt.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="listURI" type="xs:anyURI" use="optional" fixed="urn:xoev-de:xbau:codeliste:mppvobauwerksklasse">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Mit diesem XML-Attribut wird die Kennung der Codeliste übermittelt, in deren Kontext der jeweilige Code zu interpretieren ist. Die Kennung identifiziert die Codeliste, nicht jedoch deren Version eindeutig.
+
+Wird bereits im Rahmen des XÖV-Standards eine Kennung vorgegeben (es handelt sich in diesem Fall um einen Code-Typ 1, 2 oder 3) darf auf eine nochmalige Angabe der Kennung bei der Übermittlung eines Codes verzichtet werden. Aus diesem Grund ist das XML-Attribut listURI zunächst als optional deklariert.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="listVersionID" type="xs:normalizedString" use="optional" fixed="1.0">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Die konkrete Version der zu nutzenden Codeliste wird mit diesem XML-Attribut übertragen.
+
+Analog zum listURI ist die Bestimmung der Version einer Codeliste bei der Übertragung eines Codes zwingend. Die Version kann jedoch ebenfalls bereits im XÖV-Standard festgelegt werden (es handelt sich in diesem Fall um einen Code-Typ 1 oder 2).</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Code.MppvoNachpruefungGrund">
+    <xs:annotation>
+      <xs:appinfo>
+        <codeliste>
+          <nameLang>MPPVO Nachprüfung Grund</nameLang>
+          <nameKurz>MPPVO Nachprüfung Grund</nameKurz>
+          <nameTechnisch>mppvonachpruefunggrund</nameTechnisch>
+          <kennung>urn:xoev-de:xbau:codeliste:mppvonachpruefunggrund</kennung>
+          <beschreibung>Prüfung einer überwachungspflichtigen Anlage: Mögliche Gründe dafür, dass eine Nachprüfung erforderlich ist.</beschreibung>
+          <herausgebernameLang>Bauministerkonferenz</herausgebernameLang>
+          <herausgebernameKurz>BMK</herausgebernameKurz>
+        </codeliste>
+        <versionCodeliste>
+          <version>1.0</version>
+          <versionXOEVHandbuch>2.1.0</versionXOEVHandbuch>
+        </versionCodeliste>
+      </xs:appinfo>
+      <xs:documentation>Prüfung einer überwachungspflichtigen Anlage: Mögliche Gründe dafür, dass eine Nachprüfung erforderlich ist.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="xoev-code:Code">
+        <xs:sequence>
+          <xs:element name="code" type="xbau:Codelist.MppvoNachpruefungGrund" form="unqualified">
+            <xs:annotation>
+              <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+              <xs:documentation>In diesem XML-Element wird der Code einer Codeliste übermittelt.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="listURI" type="xs:anyURI" use="optional" fixed="urn:xoev-de:xbau:codeliste:mppvonachpruefunggrund">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Mit diesem XML-Attribut wird die Kennung der Codeliste übermittelt, in deren Kontext der jeweilige Code zu interpretieren ist. Die Kennung identifiziert die Codeliste, nicht jedoch deren Version eindeutig.
+
+Wird bereits im Rahmen des XÖV-Standards eine Kennung vorgegeben (es handelt sich in diesem Fall um einen Code-Typ 1, 2 oder 3) darf auf eine nochmalige Angabe der Kennung bei der Übermittlung eines Codes verzichtet werden. Aus diesem Grund ist das XML-Attribut listURI zunächst als optional deklariert.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="listVersionID" type="xs:normalizedString" use="optional" fixed="1.0">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Die konkrete Version der zu nutzenden Codeliste wird mit diesem XML-Attribut übertragen.
+
+Analog zum listURI ist die Bestimmung der Version einer Codeliste bei der Übertragung eines Codes zwingend. Die Version kann jedoch ebenfalls bereits im XÖV-Standard festgelegt werden (es handelt sich in diesem Fall um einen Code-Typ 1 oder 2).</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Code.MppvoPruefungTechnischeAnlageAnlass">
+    <xs:annotation>
+      <xs:appinfo>
+        <codeliste>
+          <nameLang>MPPVO Anlass Prüfung technische Anlage</nameLang>
+          <nameKurz>MPPVO Anlass Prüfung technische Anlage</nameKurz>
+          <nameTechnisch>mppvopruefungtechnischeanlageanlass</nameTechnisch>
+          <kennung>urn:xoev-de:xbau:codeliste:mppvopruefungtechnischeanlageanlass</kennung>
+          <beschreibung>Anlass der Prüfung einer überwachungspflilchtigen Anlage gemäß Musterprüfverordnung §2 Abs. 2</beschreibung>
+          <herausgebernameLang>Bauministerkonferenz</herausgebernameLang>
+          <herausgebernameKurz>BMK</herausgebernameKurz>
+        </codeliste>
+        <versionCodeliste>
+          <version>1.0</version>
+          <versionXOEVHandbuch>2.1.0</versionXOEVHandbuch>
+        </versionCodeliste>
+      </xs:appinfo>
+      <xs:documentation>Anlass der Prüfung einer überwachungspflilchtigen Anlage gemäß Musterprüfverordnung §2 Abs. 2</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="xoev-code:Code">
+        <xs:sequence>
+          <xs:element name="code" type="xbau:Codelist.MppvoPruefungTechnischeAnlageAnlass" form="unqualified">
+            <xs:annotation>
+              <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+              <xs:documentation>In diesem XML-Element wird der Code einer Codeliste übermittelt.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="listURI" type="xs:anyURI" use="optional" fixed="urn:xoev-de:xbau:codeliste:mppvopruefungtechnischeanlageanlass">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Mit diesem XML-Attribut wird die Kennung der Codeliste übermittelt, in deren Kontext der jeweilige Code zu interpretieren ist. Die Kennung identifiziert die Codeliste, nicht jedoch deren Version eindeutig.
+
+Wird bereits im Rahmen des XÖV-Standards eine Kennung vorgegeben (es handelt sich in diesem Fall um einen Code-Typ 1, 2 oder 3) darf auf eine nochmalige Angabe der Kennung bei der Übermittlung eines Codes verzichtet werden. Aus diesem Grund ist das XML-Attribut listURI zunächst als optional deklariert.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="listVersionID" type="xs:normalizedString" use="optional" fixed="1.0">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Die konkrete Version der zu nutzenden Codeliste wird mit diesem XML-Attribut übertragen.
+
+Analog zum listURI ist die Bestimmung der Version einer Codeliste bei der Übertragung eines Codes zwingend. Die Version kann jedoch ebenfalls bereits im XÖV-Standard festgelegt werden (es handelt sich in diesem Fall um einen Code-Typ 1 oder 2).</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Code.MppvoTechnischeAnlage">
+    <xs:annotation>
+      <xs:documentation>Arten von technischen Anlagen, die der Überwachungspflicht unterliegen gemäß Musterprüfverordnung §2 Abs. 1
+
+In diesen Typ  ist eine auszuwählende bzw. selbst zu definierende Codeliste einzubinden, die eine solche Klassifikation bietet. Im Anwendungskontext sind in die Attribute des vorliegenden Typs die Codelisten-URI und die Nummer der Version der ausgewählten Codeliste (in die XBau-Nachrichteninstanzen) einzutragen.
+
+Als Muster wurde die Codeliste XBau Technische Anlagen gemäß M-PPVO (URI: urn:xoev-de:xbau:codeliste:mppvotechnischeanlage) als Angebot zur Einbindung für diesen Typ  bereitgestellt. 
+
+Die angebotene Codeliste ist  im XRepository (www.xrepository.de) unter dem Stichwort "XBau" auffindbar und kann von dort im XML-Format OASIS Genericode abgerufen werden.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="xoev-code:Code">
+        <xs:sequence>
+          <xs:element name="code" type="xs:token" form="unqualified">
+            <xs:annotation>
+              <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+              <xs:documentation>In diesem XML-Element wird der Code einer Codeliste übermittelt.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="listURI" type="xs:anyURI" use="required">
+          <xs:annotation>
+            <xs:documentation>Hier ist die URI einer Codeliste einzutragen, die dadurch hier eingebunden ist. Es ist die Codeliste dafür auszuwählen, auf deren Basis der übermittelte Schlüssel durch den Leser der Nachricht interpretiert werden soll.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="listVersionID" type="xs:normalizedString" use="required">
+          <xs:annotation>
+            <xs:documentation>Die Version der Codeliste, welche der Interpretation des übermittelten Schlüssels zu Grunde gelegt werden soll.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Code.MppvoTechnischeAnlageWeiterbetrieb">
+    <xs:annotation>
+      <xs:appinfo>
+        <codeliste>
+          <nameLang>MPPVO Prüfung technische Anlage Weiterbetrieb</nameLang>
+          <nameKurz>MPPVO Prüfung technische Anlage Weiterbetrieb</nameKurz>
+          <nameTechnisch>mppvotechnischeanlageweiterbetrieb</nameTechnisch>
+          <kennung>urn:xoev-de:xbau:codeliste:mppvotechnischeanlageweiterbetrieb</kennung>
+          <beschreibung>Ergebnis der Prüfung einer überwachungspflilchtigen Anlage: mögliche Festlegungen zum Weiterbetrieb</beschreibung>
+          <herausgebernameLang>Bauministerkonferenz</herausgebernameLang>
+          <herausgebernameKurz>BMK</herausgebernameKurz>
+        </codeliste>
+        <versionCodeliste>
+          <version>1.0</version>
+          <versionXOEVHandbuch>2.1.0</versionXOEVHandbuch>
+        </versionCodeliste>
+      </xs:appinfo>
+      <xs:documentation>Ergebnis der Prüfung einer überwachungspflilchtigen Anlage: mögliche Festlegungen zum Weiterbetrieb</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="xoev-code:Code">
+        <xs:sequence>
+          <xs:element name="code" type="xbau:Codelist.MppvoTechnischeAnlageWeiterbetrieb" form="unqualified">
+            <xs:annotation>
+              <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+              <xs:documentation>In diesem XML-Element wird der Code einer Codeliste übermittelt.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="listURI" type="xs:anyURI" use="optional" fixed="urn:xoev-de:xbau:codeliste:mppvotechnischeanlageweiterbetrieb">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Mit diesem XML-Attribut wird die Kennung der Codeliste übermittelt, in deren Kontext der jeweilige Code zu interpretieren ist. Die Kennung identifiziert die Codeliste, nicht jedoch deren Version eindeutig.
+
+Wird bereits im Rahmen des XÖV-Standards eine Kennung vorgegeben (es handelt sich in diesem Fall um einen Code-Typ 1, 2 oder 3) darf auf eine nochmalige Angabe der Kennung bei der Übermittlung eines Codes verzichtet werden. Aus diesem Grund ist das XML-Attribut listURI zunächst als optional deklariert.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="listVersionID" type="xs:normalizedString" use="optional" fixed="1.0">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Die konkrete Version der zu nutzenden Codeliste wird mit diesem XML-Attribut übertragen.
+
+Analog zum listURI ist die Bestimmung der Version einer Codeliste bei der Übertragung eines Codes zwingend. Die Version kann jedoch ebenfalls bereits im XÖV-Standard festgelegt werden (es handelt sich in diesem Fall um einen Code-Typ 1 oder 2).</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Code.NebenbestimmungArt">
+    <xs:annotation>
+      <xs:appinfo>
+        <codeliste>
+          <nameLang>Nebenbestimmung Art</nameLang>
+          <nameKurz>Nebenbestimmung Art</nameKurz>
+          <nameTechnisch>nebenbestimmungart</nameTechnisch>
+          <kennung>urn:xoev-de:xbau:codeliste:nebenbestimmungart</kennung>
+          <beschreibung>Definition der Arten von Nebenbestimmungen zum Bescheid zu einem Bauvantrag.</beschreibung>
+          <herausgebernameLang>Bauministerkonferenz</herausgebernameLang>
+          <herausgebernameKurz>BMK</herausgebernameKurz>
+        </codeliste>
+        <versionCodeliste>
+          <version>1.0</version>
+          <versionXOEVHandbuch>2.1.0</versionXOEVHandbuch>
+        </versionCodeliste>
+      </xs:appinfo>
+      <xs:documentation>Definition der Arten von Nebenbestimmungen zum Bescheid zu einem Bauvantrag.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="xoev-code:Code">
+        <xs:sequence>
+          <xs:element name="code" type="xbau:Codelist.NebenbestimmungArt" form="unqualified">
+            <xs:annotation>
+              <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+              <xs:documentation>In diesem XML-Element wird der Code einer Codeliste übermittelt.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="listURI" type="xs:anyURI" use="optional" fixed="urn:xoev-de:xbau:codeliste:nebenbestimmungart">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Mit diesem XML-Attribut wird die Kennung der Codeliste übermittelt, in deren Kontext der jeweilige Code zu interpretieren ist. Die Kennung identifiziert die Codeliste, nicht jedoch deren Version eindeutig.
+
+Wird bereits im Rahmen des XÖV-Standards eine Kennung vorgegeben (es handelt sich in diesem Fall um einen Code-Typ 1, 2 oder 3) darf auf eine nochmalige Angabe der Kennung bei der Übermittlung eines Codes verzichtet werden. Aus diesem Grund ist das XML-Attribut listURI zunächst als optional deklariert.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="listVersionID" type="xs:normalizedString" use="optional" fixed="1.0">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Die konkrete Version der zu nutzenden Codeliste wird mit diesem XML-Attribut übertragen.
+
+Analog zum listURI ist die Bestimmung der Version einer Codeliste bei der Übertragung eines Codes zwingend. Die Version kann jedoch ebenfalls bereits im XÖV-Standard festgelegt werden (es handelt sich in diesem Fall um einen Code-Typ 1 oder 2).</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Code.Rechtsbereich">
+    <xs:annotation>
+      <xs:documentation>Dieser Code-Typ steht für eine Klassifikation von Rechtsbereichen, denen Zuständigkeiten, Normen, Fragestellungen und Bescheide zugeordnet werden können.
+
+In diesen Typ  ist eine auszuwählende bzw. selbst zu definierende Codeliste einzubinden, die eine solche Klassifikation bietet. Im Anwendungskontext sind in die Attribute des vorliegenden Typs die Codelisten-URI und die Nummer der Version der ausgewählten Codeliste (in die XBau-Nachrichteninstanzen) einzutragen.
+
+Als Muster wurde die sachgebietliche Gliederung des Fundstellennachweis A des Bundes als XÖV-konforme Codeliste dargestellt und als Angebot zur Einbindung für diesen Typ  bereitgestellt. Es wird aber vermutet, dass im Anwendungskontext oft landesrechtliche und lokale Regelungen referenziert werden müssen und daher - nach dem Vorbild des Musters - angepasste Codelisten eingesetzt werden müssen.
+
+Die angebotene Codeliste ist  im XRepository (www.xrepository.de) unter dem Stichwort "Fundstellennachweis A des Bundes"  auffindbar und kann von dort im XML-Format OASIS Genericode abgerufen werden.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="xoev-code:Code">
+        <xs:sequence>
+          <xs:element name="code" type="xs:token" form="unqualified">
+            <xs:annotation>
+              <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+              <xs:documentation>In diesem XML-Element wird der Code einer Codeliste übermittelt.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="listURI" type="xs:anyURI" use="required">
+          <xs:annotation>
+            <xs:documentation>Hier ist die URI einer Codeliste einzutragen, die dadurch hier eingebunden ist. Es ist die Codeliste dafür auszuwählen, auf deren Basis der übermittelte Schlüssel durch den Leser der Nachricht interpretiert werden soll.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="listVersionID" type="xs:normalizedString" use="required">
+          <xs:annotation>
+            <xs:documentation>Die Version der Codeliste, welche der Interpretation des übermittelten Schlüssels zu Grunde gelegt werden soll.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Code.Sonderbauten">
+    <xs:annotation>
+      <xs:appinfo>
+        <codeliste>
+          <nameLang>MBO Typen von Sonderbauten</nameLang>
+          <nameKurz>MBO Typen von Sonderbauten</nameKurz>
+          <nameTechnisch>mbosonderbauten</nameTechnisch>
+          <kennung>urn:xoev-de:xbau:codeliste:mbosonderbauten</kennung>
+          <beschreibung>Liste der Typen von Sonderbauten. Sonderbauten sind Anlagen und Räume besonderer Art oder Nutzung, die die Tatbestände nach § 2 Abs. 4 MBO erfüllen.</beschreibung>
+          <herausgebernameLang>Bauministerkonferenz</herausgebernameLang>
+          <herausgebernameKurz>BMK</herausgebernameKurz>
+        </codeliste>
+        <versionCodeliste>
+          <version>1.0</version>
+          <versionXOEVHandbuch>2.1.0</versionXOEVHandbuch>
+        </versionCodeliste>
+      </xs:appinfo>
+      <xs:documentation>Liste der Typen von Sonderbauten. Sonderbauten sind Anlagen und Räume besonderer Art oder Nutzung, die die Tatbestände nach § 2 Abs. 4 MBO erfüllen.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="xoev-code:Code">
+        <xs:sequence>
+          <xs:element name="code" type="xbau:Codelist.Sonderbauten" form="unqualified">
+            <xs:annotation>
+              <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+              <xs:documentation>In diesem XML-Element wird der Code einer Codeliste übermittelt.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="listURI" type="xs:anyURI" use="optional" fixed="urn:xoev-de:xbau:codeliste:mbosonderbauten">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Mit diesem XML-Attribut wird die Kennung der Codeliste übermittelt, in deren Kontext der jeweilige Code zu interpretieren ist. Die Kennung identifiziert die Codeliste, nicht jedoch deren Version eindeutig.
+
+Wird bereits im Rahmen des XÖV-Standards eine Kennung vorgegeben (es handelt sich in diesem Fall um einen Code-Typ 1, 2 oder 3) darf auf eine nochmalige Angabe der Kennung bei der Übermittlung eines Codes verzichtet werden. Aus diesem Grund ist das XML-Attribut listURI zunächst als optional deklariert.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="listVersionID" type="xs:normalizedString" use="optional" fixed="1.0">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Die konkrete Version der zu nutzenden Codeliste wird mit diesem XML-Attribut übertragen.
+
+Analog zum listURI ist die Bestimmung der Version einer Codeliste bei der Übertragung eines Codes zwingend. Die Version kann jedoch ebenfalls bereits im XÖV-Standard festgelegt werden (es handelt sich in diesem Fall um einen Code-Typ 1 oder 2).</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Code.Staat">
+    <xs:annotation>
+      <xs:appinfo>
+        <codeliste>
+          <nameLang>Destatis Staatsgebiete</nameLang>
+          <nameKurz>Destatis Staatsgebiete</nameKurz>
+          <nameTechnisch>Staatsgebiete</nameTechnisch>
+          <kennung>urn:de:bund:destatis:bevoelkerungsstatistik:schluessel:staatsgebiete</kennung>
+          <beschreibung>Codeliste Staatsgebiete aus der Staats- und Gebietssystematik des Statistischen Bundesamtes.Sie basiert auf dem Verzeichnis der Staatennamen für den amtlichen Gebrauch des Auswärtigen Amtes.
+
+Die Codeliste ist im XRepository (www.xrepository.de) unter Nennung ihrer Codelisten-URI auffindbar und kann von dort im XML-Format OASIS Genericode abgerufen werden.</beschreibung>
+          <herausgebernameLang>Statistisches Bundesamt, Wiesbaden</herausgebernameLang>
+          <herausgebernameKurz>Destatis</herausgebernameKurz>
+        </codeliste>
+      </xs:appinfo>
+      <xs:documentation>Codeliste Staatsgebiete aus der Staats- und Gebietssystematik des Statistischen Bundesamtes.Sie basiert auf dem Verzeichnis der Staatennamen für den amtlichen Gebrauch des Auswärtigen Amtes. 
+
+Die Codeliste ist im XRepository (www.xrepository.de) unter Nennung ihrer Codelisten-URI auffindbar und kann von dort im XML-Format OASIS Genericode abgerufen werden.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="xoev-code:Code">
+        <xs:sequence>
+          <xs:element name="code" type="xs:token" form="unqualified">
+            <xs:annotation>
+              <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+              <xs:documentation>In diesem XML-Element wird der Code einer Codeliste übermittelt.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="listURI" type="xs:anyURI" use="optional" fixed="urn:de:bund:destatis:bevoelkerungsstatistik:schluessel:staatsgebiete">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Mit diesem XML-Attribut wird die Kennung der Codeliste übermittelt, in deren Kontext der jeweilige Code zu interpretieren ist. Die Kennung identifiziert die Codeliste, nicht jedoch deren Version eindeutig.
+
+Wird bereits im Rahmen des XÖV-Standards eine Kennung vorgegeben (es handelt sich in diesem Fall um einen Code-Typ 1, 2 oder 3) darf auf eine nochmalige Angabe der Kennung bei der Übermittlung eines Codes verzichtet werden. Aus diesem Grund ist das XML-Attribut listURI zunächst als optional deklariert.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="listVersionID" type="xs:normalizedString" use="required">
+          <xs:annotation>
+            <xs:documentation>Die Version der Codeliste, welche der Interpretation des übermittelten Schlüssels zu Grunde gelegt werden soll.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Code.StatistikmeldungAnlass">
+    <xs:annotation>
+      <xs:appinfo>
+        <codeliste>
+          <nameLang>Statistikmeldung Anlass</nameLang>
+          <nameKurz>Statistikmeldung Anlass</nameKurz>
+          <nameTechnisch>statistikmeldunganlass</nameTechnisch>
+          <kennung>urn:xoev-de:xbau:codeliste:statistikmeldunganlass</kennung>
+          <beschreibung>Diese Codeliste enthält die Anlässe für Datenlieferungen an die amtliche Statistik.</beschreibung>
+          <herausgebernameLang>Bauministerkonferenz</herausgebernameLang>
+          <herausgebernameKurz>BMK</herausgebernameKurz>
+        </codeliste>
+        <versionCodeliste>
+          <version>1.0</version>
+          <versionXOEVHandbuch>2.1.0</versionXOEVHandbuch>
+        </versionCodeliste>
+      </xs:appinfo>
+      <xs:documentation>Diese Codeliste enthält die Anlässe für Datenlieferungen an die amtliche Statistik.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="xoev-code:Code">
+        <xs:sequence>
+          <xs:element name="code" type="xbau:Codelist.StatistikmeldungAnlass" form="unqualified">
+            <xs:annotation>
+              <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+              <xs:documentation>In diesem XML-Element wird der Code einer Codeliste übermittelt.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="listURI" type="xs:anyURI" use="optional" fixed="urn:xoev-de:xbau:codeliste:statistikmeldunganlass">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Mit diesem XML-Attribut wird die Kennung der Codeliste übermittelt, in deren Kontext der jeweilige Code zu interpretieren ist. Die Kennung identifiziert die Codeliste, nicht jedoch deren Version eindeutig.
+
+Wird bereits im Rahmen des XÖV-Standards eine Kennung vorgegeben (es handelt sich in diesem Fall um einen Code-Typ 1, 2 oder 3) darf auf eine nochmalige Angabe der Kennung bei der Übermittlung eines Codes verzichtet werden. Aus diesem Grund ist das XML-Attribut listURI zunächst als optional deklariert.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="listVersionID" type="xs:normalizedString" use="optional" fixed="1.0">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Die konkrete Version der zu nutzenden Codeliste wird mit diesem XML-Attribut übertragen.
+
+Analog zum listURI ist die Bestimmung der Version einer Codeliste bei der Übertragung eines Codes zwingend. Die Version kann jedoch ebenfalls bereits im XÖV-Standard festgelegt werden (es handelt sich in diesem Fall um einen Code-Typ 1 oder 2).</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Code.VorbescheidBetreff">
+    <xs:annotation>
+      <xs:appinfo>
+        <codeliste>
+          <nameLang>Vorbescheid Betreff</nameLang>
+          <nameKurz>Vorbescheid Betreff</nameKurz>
+          <nameTechnisch>vorbescheidbetreff</nameTechnisch>
+          <kennung>urn:xoev-de:xbau:codeliste:vorbescheidbetreff</kennung>
+          <beschreibung>Definition der Kategorien von Gegenständen von Vorbescheiden, die im Rahmen der Vorbereitung eines Bauprojekts beantragt werden können.</beschreibung>
+          <herausgebernameLang>Bauministerkonferenz</herausgebernameLang>
+          <herausgebernameKurz>BMK</herausgebernameKurz>
+        </codeliste>
+        <versionCodeliste>
+          <version>1.0</version>
+          <versionXOEVHandbuch>2.1.0</versionXOEVHandbuch>
+        </versionCodeliste>
+      </xs:appinfo>
+      <xs:documentation>Definition der Kategorien von Gegenständen von Vorbescheiden, die im Rahmen der Vorbereitung eines Bauprojekts beantragt werden können.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="xoev-code:Code">
+        <xs:sequence>
+          <xs:element name="code" type="xbau:Codelist.VorbescheidBetreff" form="unqualified">
+            <xs:annotation>
+              <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+              <xs:documentation>In diesem XML-Element wird der Code einer Codeliste übermittelt.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="listURI" type="xs:anyURI" use="optional" fixed="urn:xoev-de:xbau:codeliste:vorbescheidbetreff">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Mit diesem XML-Attribut wird die Kennung der Codeliste übermittelt, in deren Kontext der jeweilige Code zu interpretieren ist. Die Kennung identifiziert die Codeliste, nicht jedoch deren Version eindeutig.
+
+Wird bereits im Rahmen des XÖV-Standards eine Kennung vorgegeben (es handelt sich in diesem Fall um einen Code-Typ 1, 2 oder 3) darf auf eine nochmalige Angabe der Kennung bei der Übermittlung eines Codes verzichtet werden. Aus diesem Grund ist das XML-Attribut listURI zunächst als optional deklariert.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="listVersionID" type="xs:normalizedString" use="optional" fixed="1.0">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Die konkrete Version der zu nutzenden Codeliste wird mit diesem XML-Attribut übertragen.
+
+Analog zum listURI ist die Bestimmung der Version einer Codeliste bei der Übertragung eines Codes zwingend. Die Version kann jedoch ebenfalls bereits im XÖV-Standard festgelegt werden (es handelt sich in diesem Fall um einen Code-Typ 1 oder 2).</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Code.VorlagenBauantragBauvorhaben">
+    <xs:annotation>
+      <xs:appinfo>
+        <codeliste>
+          <nameLang>Vorlagen zur Beurteilung des Bauvorhabens</nameLang>
+          <nameKurz>Vorlagen zur Beurteilung des Bauvorhabens</nameKurz>
+          <nameTechnisch>vorlagenbauantragbauvorhaben</nameTechnisch>
+          <kennung>urn:xoev-de:xbau:codeliste:vorlagenbauantragbauvorhaben</kennung>
+          <beschreibung>Diese Codeliste nennt Arten von Bauvorlagen, die einem Bauantrag als Anlagen beigefügt sein können und die zur Beurteilung des Bauvorhabens notwendig sind. Quelle ist § 68 Abs. 2 MBO in Verbindung mit MBauVorlVO Teil II+III.</beschreibung>
+          <herausgebernameLang>Bauministerkonferenz</herausgebernameLang>
+          <herausgebernameKurz>BMK</herausgebernameKurz>
+        </codeliste>
+        <versionCodeliste>
+          <version>1.0</version>
+          <versionXOEVHandbuch>2.1.0</versionXOEVHandbuch>
+        </versionCodeliste>
+      </xs:appinfo>
+      <xs:documentation>Diese Codeliste nennt Arten von Bauvorlagen, die einem Bauantrag als Anlagen beigefügt sein können und die zur Beurteilung des Bauvorhabens notwendig sind.  Quelle ist § 68 Abs. 2 MBO in Verbindung mit MBauVorlVO Teil II+III.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="xoev-code:Code">
+        <xs:sequence>
+          <xs:element name="code" type="xbau:Codelist.VorlagenBauantragBauvorhaben" form="unqualified">
+            <xs:annotation>
+              <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+              <xs:documentation>In diesem XML-Element wird der Code einer Codeliste übermittelt.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="listURI" type="xs:anyURI" use="optional" fixed="urn:xoev-de:xbau:codeliste:vorlagenbauantragbauvorhaben">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Mit diesem XML-Attribut wird die Kennung der Codeliste übermittelt, in deren Kontext der jeweilige Code zu interpretieren ist. Die Kennung identifiziert die Codeliste, nicht jedoch deren Version eindeutig.
+
+Wird bereits im Rahmen des XÖV-Standards eine Kennung vorgegeben (es handelt sich in diesem Fall um einen Code-Typ 1, 2 oder 3) darf auf eine nochmalige Angabe der Kennung bei der Übermittlung eines Codes verzichtet werden. Aus diesem Grund ist das XML-Attribut listURI zunächst als optional deklariert.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="listVersionID" type="xs:normalizedString" use="optional" fixed="1.0">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Die konkrete Version der zu nutzenden Codeliste wird mit diesem XML-Attribut übertragen.
+
+Analog zum listURI ist die Bestimmung der Version einer Codeliste bei der Übertragung eines Codes zwingend. Die Version kann jedoch ebenfalls bereits im XÖV-Standard festgelegt werden (es handelt sich in diesem Fall um einen Code-Typ 1 oder 2).</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Code.VorlagenBauantragBearbeitung">
+    <xs:annotation>
+      <xs:appinfo>
+        <codeliste>
+          <nameLang>Vorlagen zur Bearbeitung des Bauantrags</nameLang>
+          <nameKurz>Vorlagen zur Bearbeitung des Bauantrags</nameKurz>
+          <nameTechnisch>vorlagenbauantragbearbeitung</nameTechnisch>
+          <kennung>urn:xoev-de:xbau:codeliste:vorlagenbauantragbearbeitung</kennung>
+          <beschreibung>Diese Codeliste nennt Arten von Bauvorlagen, die einem Bauantrag als Anlagen beigefügt sein können und die zur Bearbeitung des Bauantrags benötigt werden.  Quelle ist § 68 Abs. 2 MBO in Verbindung mit MBauVorlVO Teil II+III.</beschreibung>
+          <herausgebernameLang>Bauministerkonferenz</herausgebernameLang>
+          <herausgebernameKurz>BMK</herausgebernameKurz>
+        </codeliste>
+        <versionCodeliste>
+          <version>1.0</version>
+          <versionXOEVHandbuch>2.1.0</versionXOEVHandbuch>
+        </versionCodeliste>
+      </xs:appinfo>
+      <xs:documentation>Diese Codeliste nennt Arten von Bauvorlagen, die einem Bauantrag als Anlagen beigefügt sein können und die zur Bearbeitung des Bauantrags benötigt werden.  Quelle ist § 68 Abs. 2 MBO in Verbindung mit MBauVorlVO Teil II+III.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="xoev-code:Code">
+        <xs:sequence>
+          <xs:element name="code" type="xbau:Codelist.VorlagenBauantragBearbeitung" form="unqualified">
+            <xs:annotation>
+              <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+              <xs:documentation>In diesem XML-Element wird der Code einer Codeliste übermittelt.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="listURI" type="xs:anyURI" use="optional" fixed="urn:xoev-de:xbau:codeliste:vorlagenbauantragbearbeitung">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Mit diesem XML-Attribut wird die Kennung der Codeliste übermittelt, in deren Kontext der jeweilige Code zu interpretieren ist. Die Kennung identifiziert die Codeliste, nicht jedoch deren Version eindeutig.
+
+Wird bereits im Rahmen des XÖV-Standards eine Kennung vorgegeben (es handelt sich in diesem Fall um einen Code-Typ 1, 2 oder 3) darf auf eine nochmalige Angabe der Kennung bei der Übermittlung eines Codes verzichtet werden. Aus diesem Grund ist das XML-Attribut listURI zunächst als optional deklariert.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="listVersionID" type="xs:normalizedString" use="optional" fixed="1.0">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Die konkrete Version der zu nutzenden Codeliste wird mit diesem XML-Attribut übertragen.
+
+Analog zum listURI ist die Bestimmung der Version einer Codeliste bei der Übertragung eines Codes zwingend. Die Version kann jedoch ebenfalls bereits im XÖV-Standard festgelegt werden (es handelt sich in diesem Fall um einen Code-Typ 1 oder 2).</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Code.VorlagenBauzustand">
+    <xs:annotation>
+      <xs:appinfo>
+        <codeliste>
+          <nameLang>Vorlagen zur Bauzustandsanzeige</nameLang>
+          <nameKurz>Vorlagen zur Bauzustandsanzeige</nameKurz>
+          <nameTechnisch>vorlagenbauzustand</nameTechnisch>
+          <kennung>urn:xoev-de:xbau:codeliste:vorlagenbauzustand</kennung>
+          <beschreibung>Diese Codeliste nennt Arten von Bauvorlagen, die als Anlagen zu Bauzustandsanzeigen dienen können. Quelle ist § 81 MBO in Verbindung mit MBauVorlV Teil IV. 
+Diese Unterlagen sind keine Bauvorlagen zum Bauantrag gem. § 68 Abs. 2 MBO, sondern weitere Bauzustandsanzeigen zur Bauüberwachung gem. § 81 MBO.</beschreibung>
+          <herausgebernameLang>Bauministerkonferenz</herausgebernameLang>
+          <herausgebernameKurz>BMK</herausgebernameKurz>
+        </codeliste>
+        <versionCodeliste>
+          <version>1.0</version>
+          <versionXOEVHandbuch>2.1.0</versionXOEVHandbuch>
+        </versionCodeliste>
+      </xs:appinfo>
+      <xs:documentation>Diese Codeliste nennt Arten von Bauvorlagen, die als Anlagen zu Bauzustandsanzeigen dienen können. Quelle ist § 81 MBO in Verbindung mit MBauVorlV Teil IV. 
+Diese Unterlagen sind keine Bauvorlagen zum Bauantrag gem. § 68 Abs. 2 MBO, sondern weitere Bauzustandsanzeigen zur Bauüberwachung gem. § 81 MBO.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="xoev-code:Code">
+        <xs:sequence>
+          <xs:element name="code" type="xbau:Codelist.VorlagenBauzustand" form="unqualified">
+            <xs:annotation>
+              <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+              <xs:documentation>In diesem XML-Element wird der Code einer Codeliste übermittelt.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="listURI" type="xs:anyURI" use="optional" fixed="urn:xoev-de:xbau:codeliste:vorlagenbauzustand">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Mit diesem XML-Attribut wird die Kennung der Codeliste übermittelt, in deren Kontext der jeweilige Code zu interpretieren ist. Die Kennung identifiziert die Codeliste, nicht jedoch deren Version eindeutig.
+
+Wird bereits im Rahmen des XÖV-Standards eine Kennung vorgegeben (es handelt sich in diesem Fall um einen Code-Typ 1, 2 oder 3) darf auf eine nochmalige Angabe der Kennung bei der Übermittlung eines Codes verzichtet werden. Aus diesem Grund ist das XML-Attribut listURI zunächst als optional deklariert.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="listVersionID" type="xs:normalizedString" use="optional" fixed="1.0">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Die konkrete Version der zu nutzenden Codeliste wird mit diesem XML-Attribut übertragen.
+
+Analog zum listURI ist die Bestimmung der Version einer Codeliste bei der Übertragung eines Codes zwingend. Die Version kann jedoch ebenfalls bereits im XÖV-Standard festgelegt werden (es handelt sich in diesem Fall um einen Code-Typ 1 oder 2).</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Code.XBau-MimeType">
+    <xs:annotation>
+      <xs:documentation>Dieser Code-Typ steht für eine Benennung des MimeTypes einer über XBau bereitgestellten Ressource.
+
+In diesen Typ  ist eine auszuwählende bzw. selbst zu definierende Codeliste einzubinden, die eine dafür passende Auflistung bietet. Im Anwendungskontext sind in die Attribute des vorliegenden Typs die Codelisten-URI und die Nummer der Version der ausgewählten Codeliste (in die XBau-Nachrichteninstanzen) einzutragen.
+
+Als Muster wurde eine passende Codeliste definiert und als Angebot zur Einbindung für diesen Typ  bereitgestellt. Diese Codeliste kann auf Antrag erweitert bzw. geändert werden. Sie ist  im XRepository (www.xrepository.de) unter der Codelisten-URI urn:xoev-de:xbau:codeliste:xbau-mimetypes  auffindbar und kann von dort im XML-Format OASIS Genericode abgerufen werden.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="xoev-code:Code">
+        <xs:sequence>
+          <xs:element name="code" type="xs:token" form="unqualified">
+            <xs:annotation>
+              <xs:documentation>In diesem Element ist ein Schlüssel aus der referenzierten Codeliste einzutragen.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="listURI" type="xs:anyURI" use="required">
+          <xs:annotation>
+            <xs:documentation>Hier ist die URI einer Codeliste einzutragen, die dadurch hier eingebunden ist. Es ist die Codeliste dafür auszuwählen, auf deren Basis der übermittelte Schlüssel durch den Leser der Nachricht interpretiert werden soll.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="listVersionID" type="xs:normalizedString" use="required">
+          <xs:annotation>
+            <xs:documentation>Die Version der Codeliste, welche der Interpretation des übermittelten Schlüssels zu Grunde gelegt werden soll.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Code.XBau.Fehlerkennzahl">
+    <xs:annotation>
+      <xs:appinfo>
+        <codeliste>
+          <nameLang>XBau Fehlerkennzahlen</nameLang>
+          <nameKurz>XBau Fehlerkennzahlen</nameKurz>
+          <nameTechnisch>xbau-fehlerkennzahlen</nameTechnisch>
+          <kennung>urn:xoev-de:xbau:codeliste:xbau-fehlerkennzahlen</kennung>
+          <beschreibung>Codeliste der Fehlerkennzahlen für die Klassifikation von Fehlern, die in XBau-Nachrichteninstanzen angetroffen werden. Die Einträge bestehen aus Fehlerkennzahl und der Angabe deren Bedeutung. Gruppen von Codes: X - formales Problem mit XML oder mit (Inhalten von) Codelisten, V - Versionsproblem, S - nicht spezifikationskonform, A - Problem mit Anlagen zur empfangenen Nachricht.</beschreibung>
+          <herausgebernameLang>Bauministerkonferenz</herausgebernameLang>
+          <herausgebernameKurz>BMK</herausgebernameKurz>
+        </codeliste>
+      </xs:appinfo>
+      <xs:documentation>Codeliste der Fehlerkennzahlen für die Klassifizierung von Fehlern. Die Einträge bestehen aus Fehlerkennzahl und deren Bedeutung. Die Liste wird durch XBau gepflegt. 
+
+Sie ist im XRepository (www.xrepository.de) unter der Codelisten-URI auffindbar. Ihre Versionen können von dort im XML-Format OASIS Genericode abgerufen werden.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="xoev-code:Code">
+        <xs:sequence>
+          <xs:element name="code" type="xs:token" form="unqualified">
+            <xs:annotation>
+              <xs:documentation>In diesem Element ist ein Schlüssel aus der referenzierten Codeliste einzutragen.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="listURI" type="xs:anyURI" use="optional" fixed="urn:xoev-de:xbau:codeliste:xbau-fehlerkennzahlen">
+          <xs:annotation>
+            <xs:documentation>Hier ist die URI einer Codeliste einzutragen, die dadurch hier eingebunden ist. Es ist die Codeliste dafür auszuwählen, auf deren Basis der übermittelte Schlüssel durch den Leser der Nachricht interpretiert werden soll.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="listVersionID" type="xs:normalizedString" use="required">
+          <xs:annotation>
+            <xs:documentation>Die Version der Codeliste, welche der Interpretation des übermittelten Schlüssels zu Grunde gelegt werden soll.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Code.XBauNachrichten">
+    <xs:annotation>
+      <xs:appinfo>
+        <codeliste>
+          <nameLang>XBau-Nachrichten</nameLang>
+          <nameKurz>XBau-Nachrichten</nameKurz>
+          <nameTechnisch>xbau-nachrichten</nameTechnisch>
+          <kennung>urn:xoev-de:xbau:codeliste:xbau-nachrichten</kennung>
+          <beschreibung>Codeliste der Bezeichnungen aller XBau-Nachrichten.</beschreibung>
+          <herausgebernameLang>Bauministerkonferenz</herausgebernameLang>
+          <herausgebernameKurz>BMK</herausgebernameKurz>
+        </codeliste>
+        <versionCodeliste>
+          <version>1.0</version>
+          <versionXOEVHandbuch>2.1.0</versionXOEVHandbuch>
+        </versionCodeliste>
+      </xs:appinfo>
+      <xs:documentation>Codeliste der Bezeichnungen aller XBau-Nachrichten.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="xoev-code:Code">
+        <xs:sequence>
+          <xs:element name="code" type="xbau:Codelist.XBauNachrichten" form="unqualified">
+            <xs:annotation>
+              <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+              <xs:documentation>In diesem XML-Element wird der Code einer Codeliste übermittelt.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="listURI" type="xs:anyURI" use="optional" fixed="urn:xoev-de:xbau:codeliste:xbau-nachrichten">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Mit diesem XML-Attribut wird die Kennung der Codeliste übermittelt, in deren Kontext der jeweilige Code zu interpretieren ist. Die Kennung identifiziert die Codeliste, nicht jedoch deren Version eindeutig.
+
+Wird bereits im Rahmen des XÖV-Standards eine Kennung vorgegeben (es handelt sich in diesem Fall um einen Code-Typ 1, 2 oder 3) darf auf eine nochmalige Angabe der Kennung bei der Übermittlung eines Codes verzichtet werden. Aus diesem Grund ist das XML-Attribut listURI zunächst als optional deklariert.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="listVersionID" type="xs:normalizedString" use="optional" fixed="1.0">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Die konkrete Version der zu nutzenden Codeliste wird mit diesem XML-Attribut übertragen.
+
+Analog zum listURI ist die Bestimmung der Version einer Codeliste bei der Übertragung eines Codes zwingend. Die Version kann jedoch ebenfalls bereits im XÖV-Standard festgelegt werden (es handelt sich in diesem Fall um einen Code-Typ 1 oder 2).</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="Codelist.AbweichungArt">
+    <xs:annotation>
+      <xs:appinfo>
+        <codeliste>
+          <nameLang>Abweichung Art</nameLang>
+          <nameKurz>Abweichung Art</nameKurz>
+          <nameTechnisch>abweichungart</nameTechnisch>
+          <kennung>urn:xoev-de:xbau:codeliste:abweichungart</kennung>
+          <beschreibung>Definition der Arten von beantragten oder genehmigten Abweichungen eines Bauvorhabens von den Rechtsnormen.</beschreibung>
+          <herausgebernameLang>Bauministerkonferenz</herausgebernameLang>
+          <herausgebernameKurz>BMK</herausgebernameKurz>
+        </codeliste>
+        <versionCodeliste>
+          <version>1.0</version>
+          <versionXOEVHandbuch>2.1.0</versionXOEVHandbuch>
+        </versionCodeliste>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="1">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Befreiung</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+          <xs:documentation>Befreiungen nach § 31 Abs. 2 BauGB</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Ausnahme</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+          <xs:documentation>Ausnahmen nach § 31 Abs. 1 BauGB</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Abweichung</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+          <xs:documentation>Abweichungen nach § 67 Abs. 1 MBO</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Codelist.Baumassnahme">
+    <xs:annotation>
+      <xs:appinfo>
+        <codeliste>
+          <nameLang>Baumaßnahme Art</nameLang>
+          <nameKurz>Baumaßnahme Art</nameKurz>
+          <nameTechnisch>baumassnahme</nameTechnisch>
+          <kennung>urn:xoev-de:xbau:codeliste:baumassnahme</kennung>
+          <beschreibung>Diese Codeliste enthält die Einteilung, von welcher grundsätzlichen Art die  Maßnahmen im Rahmen eines Bauvorhabens sein können.</beschreibung>
+          <herausgebernameLang>Bauministerkonferenz</herausgebernameLang>
+          <herausgebernameKurz>BMK</herausgebernameKurz>
+        </codeliste>
+        <versionCodeliste>
+          <version>1.0</version>
+          <versionXOEVHandbuch>2.1.0</versionXOEVHandbuch>
+        </versionCodeliste>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="1">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Errichtung</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+          <xs:documentation>Errichtung von baulichen Anlagen nach § 2 Abs. 1 MBO</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Änderung</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+          <xs:documentation>Änderung von baulichen Anlagen nach § 2 Abs. 1 MBO</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Nutzungsänderung  (ohne bauliche Änderung)</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+          <xs:documentation>Änderung der Art der baulichen Nutzung gem. § 1 bis 15 BauNVO. Hier ohne dafür umzusetzende bauliche Änderungen.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="4">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Nutzungsänderung (mit baulicher Änderung)</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+          <xs:documentation>Änderung der Art der baulichen Nutzung gem. § 1 bis 15 BauNVO. Hier unter Einbeziehung dafür umzusetzender baulicher Änderungen.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Beseitigung</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+          <xs:documentation>Verfahrensfreie Beseitigung nach § 61 MBO (3)</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Codelist.BautechnischerNachweisArt">
+    <xs:annotation>
+      <xs:appinfo>
+        <codeliste>
+          <nameLang>Bautechnischer Nachweis Art</nameLang>
+          <nameKurz>Bautechnischer Nachweis Art</nameKurz>
+          <nameTechnisch>bautechnischernachweisart</nameTechnisch>
+          <kennung>urn:xoev-de:xbau:codeliste:bautechnischernachweisart</kennung>
+          <beschreibung>Art eines bautechnischen Nachweises, der zu den Planungsunterlagen eines Bauvorhabens nach § 66 MBO gehören kann.</beschreibung>
+          <herausgebernameLang>Bauministerkonferenz</herausgebernameLang>
+          <herausgebernameKurz>BMK</herausgebernameKurz>
+        </codeliste>
+        <versionCodeliste>
+          <version>1.0</version>
+          <versionXOEVHandbuch>2.1.0</versionXOEVHandbuch>
+        </versionCodeliste>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="1">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Nachweis der Standsicherheit</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Nachweis über den Brandschutz</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Nachweis über den Schallschutz</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="4">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Nachweis über den Wärmeschutz</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Nachweis über den Erschütterungsschutz</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Codelist.BauvorlageberechtigungSachverhalt">
+    <xs:annotation>
+      <xs:appinfo>
+        <codeliste>
+          <nameLang>Bauvorlageberechtigung Sachverhalt</nameLang>
+          <nameKurz>Bauvorlageberechtigung Sachverhalt</nameKurz>
+          <nameTechnisch>bauvorlageberechtigungsachverhalt</nameTechnisch>
+          <kennung>urn:xoev-de:xbau:codeliste:bauvorlageberechtigungsachverhalt</kennung>
+          <beschreibung>Diese Codeliste nennt die gemäß § 65 Abs. 2 MBO definierten Sachverhalte, aufgrund derer eine Person bauvorlageberechtigt sein kann.</beschreibung>
+          <herausgebernameLang>Bauministerkonferenz</herausgebernameLang>
+          <herausgebernameKurz>BMK</herausgebernameKurz>
+        </codeliste>
+        <versionCodeliste>
+          <version>1.0</version>
+          <versionXOEVHandbuch>2.1.0</versionXOEVHandbuch>
+        </versionCodeliste>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="1">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Architekt</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+          <xs:documentation>Die Person darf die Berufsbezeichnung Architekt führen.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Ingenieur</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+          <xs:documentation>Die Person ist in die von der Ingenieurkammer geführte Liste der Bauvorlageberechtigten eingetragen.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Innenarchitekt</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+          <xs:documentation>Die Person darf die Berufsbezeichnung Innenarchitekt führen.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="4">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Bediensteter einer Behörde</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+          <xs:documentation>Die Person hat als Bediensteter einer juristischen Person des öffentlichen Rechts für die dienstliche Tätigkeit die entsprechende Ausbildung und Erfahrung in Architektur, Hochbau oder Bauingenieurwesens.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Codelist.Bauweise">
+    <xs:annotation>
+      <xs:appinfo>
+        <codeliste>
+          <nameLang>Bauweise nach BauNVO</nameLang>
+          <nameKurz>Bauweise nach BauNVO</nameKurz>
+          <nameTechnisch>bauweise</nameTechnisch>
+          <kennung>urn:xoev-de:xbau:codeliste:bauweise</kennung>
+          <beschreibung>Angabe zur Bauweise nach §22 BauNVO</beschreibung>
+          <herausgebernameLang>Bauministerkonferenz</herausgebernameLang>
+          <herausgebernameKurz>BMK</herausgebernameKurz>
+        </codeliste>
+        <versionCodeliste>
+          <version>1.0</version>
+          <versionXOEVHandbuch>2.1.0</versionXOEVHandbuch>
+        </versionCodeliste>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="1">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Offene Bauweise - Einzelhaus</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Offene Bauweise - Doppelhaus</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Offene Bauweise - Hausgruppe, z.B. Reihenhaus</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="4">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Offene Bauweise - Geschossbau</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Geschlossene Bauweise</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="6">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Abweichende Bauweise</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Codelist.BeteiligungRolle">
+    <xs:annotation>
+      <xs:appinfo>
+        <codeliste>
+          <nameLang>Beteiligung Rolle</nameLang>
+          <nameKurz>Beteiligung Rolle</nameKurz>
+          <nameTechnisch>beteiligungrolle</nameTechnisch>
+          <kennung>urn:xoev-de:xbau:codeliste:beteiligungrolle</kennung>
+          <beschreibung>Benennung der Rolle einer zu beteiligenden Behörde oder Stelle als Träger öffentlicher Belange in einem Beteiligungsverfahren.</beschreibung>
+          <herausgebernameLang>Bauministerkonferenz</herausgebernameLang>
+          <herausgebernameKurz>BMK</herausgebernameKurz>
+        </codeliste>
+        <versionCodeliste>
+          <version>1.0</version>
+          <versionXOEVHandbuch>2.1.0</versionXOEVHandbuch>
+        </versionCodeliste>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="1">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Der Adressat der Nachricht soll als für ein bestimmtes Rechtsgebiet zuständige Stelle beteiligt werden.</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Der Adressat der Nachricht soll als für ein bestimmtes Rechtsgebiet sachverständige Stelle beteiligt werden.</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Der Adressat der Nachricht soll als betroffene Gemeinde beteiligt werden.</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Codelist.FormelleBefundeAntrag">
+    <xs:annotation>
+      <xs:appinfo>
+        <codeliste>
+          <nameLang>Befunde formelle Prüfung Antrag</nameLang>
+          <nameKurz>Befunde formelle Prüfung Antrag</nameKurz>
+          <nameTechnisch>formellebefundeantragart</nameTechnisch>
+          <kennung>urn:xoev-de:xbau:codeliste:formellebefundeantragart</kennung>
+          <beschreibung>In dieser Codeliste sind Kategorien von Befunden einer formellen Prüfung notiert. Es geht hier um Befundlisten, die das Ergebnis der formellen Prüfung eines Bauantrags, Abweichungsantrags, Vorbescheidsantrags, Prüfauftrags (bautechnische Nachweise) oder einer vorgelegten Baulasterklärung sind.</beschreibung>
+          <herausgebernameLang>Bauministerkonferenz</herausgebernameLang>
+          <herausgebernameKurz>BMK</herausgebernameKurz>
+        </codeliste>
+        <versionCodeliste>
+          <version>1.0</version>
+          <versionXOEVHandbuch>2.1.0</versionXOEVHandbuch>
+        </versionCodeliste>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="1">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Angaben zu den Beteiligten fehlerhaft oder unvollständig</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Angaben zum Bauvorhaben fehlerhaft oder unvollständig</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Angaben zur Lokalisierung fehlerhaft oder unvollständig</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="4">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Eingereichte Bauvorlage oder sonstige Anlage hat Mängel</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Bauvorlage oder sonstige Anlage fehlt</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="6">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Abweichungsantrag fehlt</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Codelist.Garagentyp">
+    <xs:annotation>
+      <xs:appinfo>
+        <codeliste>
+          <nameLang>MBO Garagentypen</nameLang>
+          <nameKurz>MBO Garagentypen</nameKurz>
+          <nameTechnisch>mbogaragentyp</nameTechnisch>
+          <kennung>urn:xoev-de:xbau:codeliste:mbogaragentyp</kennung>
+          <beschreibung>Garagen nach § 2 Abs. 7 MBO, konkretisiert in § 1 Abs. 8 MGarV</beschreibung>
+          <herausgebernameLang>Bauministerkonferenz</herausgebernameLang>
+          <herausgebernameKurz>BMK</herausgebernameKurz>
+        </codeliste>
+        <versionCodeliste>
+          <version>1.0</version>
+          <versionXOEVHandbuch>2.1.0</versionXOEVHandbuch>
+        </versionCodeliste>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="1">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Kleingarage (§ 2 Abs. 8 Nr. 1 MGarVO)</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Mittelgarage (§ 2 Abs. 8 Nr. 2 MGarVO)</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Großgarage (§ 2 Abs. 8 Nr. 3 MGarVO)</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="4">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Offene Garage (§ 1 Abs. 1 MGarVO)</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Geschlossene Garage (§ 1 Abs.3 MGarVO)</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="6">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Oberirdische Garage (§ 1 Abs. 4 MGarVO)</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="7">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Tiefgarage</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="8">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Automatische Garage (§ 1 Abs. 5 MGarVO)</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Codelist.Genehmigungsfreistellung">
+    <xs:annotation>
+      <xs:appinfo>
+        <codeliste>
+          <nameLang>Genehmigungsfreistellungsverfahren Ergebnis</nameLang>
+          <nameKurz>Genehmigungsfreistellungsverfahren Ergebnis</nameKurz>
+          <nameTechnisch>genehmigungsfreistellung</nameTechnisch>
+          <kennung>urn:xoev-de:xbau:codeliste:genehmigungsfreistellung</kennung>
+          <beschreibung>Genehmigungsfreistellungsverfahren:  Definition der möglichen Ergebnisse eines Vorgangs mit entsprechendem Bescheid an den Bauherrn.</beschreibung>
+          <herausgebernameLang>Bauministerkonferenz</herausgebernameLang>
+          <herausgebernameKurz>BMK</herausgebernameKurz>
+        </codeliste>
+        <versionCodeliste>
+          <version>1.0</version>
+          <versionXOEVHandbuch>2.1.0</versionXOEVHandbuch>
+        </versionCodeliste>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="1">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Genehmigungsfreistellung: Das angezeigte Vorhaben ist durch Entscheidung der Gemeinde von der Genehmigungspflicht freigestellt. Auch wird die Gemeinde keine Untersagung gemäß § 15 BauGB beantragen.</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Keine Genehmigungsfreistellung  / automatische Weiterführung: Die Gemeinde hat keine Einwände gegen das Bauvorhaben (Untersagung nach § 15 BauGB), hat aber entschieden, dass ein Genehmigungsverfahren notwendig ist. Der Vorgang wird als Baugenehmigungsantrag bei der zuständigen Bauaufsichtsbehörde weitergeführt (wurde für diesen Fall so vom Bauherrn gewünscht). Die eingereichten Daten und Unterlagen wurden gelöscht, soweit sie von der Gemeinde vorgehalten wurden.</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Keine Genehmigungsfreistellung / keine automatische Weiterführung: Die Gemeinde hat keine Einwände gegen das Bauvorhaben (Untersagung nach § 15 BauGB), hat aber entschieden, dass ein Genehmigungsverfahren notwendig ist. Der Bauherr hat die Möglichkeit, einen Baugenehmigungsantrag bei der zuständigen Baufaufsichtsbehörde zu stellen.</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="4">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Untersagung (und keine Genehmigungsfreistellung): Die Gemeinde legt ihr Veto gegen das Bauvorhaben ein.  Bei der zuständigen Bauaufsichtsbehörde wurde ein Antrag auf vorläufige Untersagung nach § 15 BauGB gestellt.</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Codelist.MboGebaeudeklasse">
+    <xs:annotation>
+      <xs:appinfo>
+        <codeliste>
+          <nameLang>MBO Gebäudeklassen</nameLang>
+          <nameKurz>MBO Gebäudeklassen</nameKurz>
+          <nameTechnisch>mbogebaeudeklasse</nameTechnisch>
+          <kennung>urn:xoev-de:xbau:codeliste:mbogebaeudeklasse</kennung>
+          <beschreibung>Gebäudeklassen gemäß § 2 Abs. 3 MBO</beschreibung>
+          <herausgebernameLang>Bauministerkonferenz</herausgebernameLang>
+          <herausgebernameKurz>BMK</herausgebernameKurz>
+        </codeliste>
+        <versionCodeliste>
+          <version>1.0</version>
+          <versionXOEVHandbuch>2.1.0</versionXOEVHandbuch>
+        </versionCodeliste>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="1">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Gebäudeklasse 1</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+          <xs:documentation>Freistehende Gebäude mit einer Höhe bis zu 7 m und nicht mehr als zwei Nutzungseinheiten von insgesamt nicht mehr als 400 m² und freistehende land- oder forstwirtschaftlich genutzte Gebäude</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Gebäudeklasse 2</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+          <xs:documentation>Gebäude mit einer Höhe bis zu 7 m und nicht mehr als zwei Nutzungseinheiten von insgesamt nicht mehr als 400 m²</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Gebäudeklasse 3</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+          <xs:documentation>Sonstige Gebäude mit einer Höhe bis zu 7 m</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="4">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Gebäudeklasse 4</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+          <xs:documentation>Gebäude mit einer Höhe bis zu 13 m und Nutzungseinheiten mit jeweils nicht mehr als 400 m²</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Gebäudeklasse 5</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+          <xs:documentation>Sonstige Gebäude einschließlich unterirdischer Gebäude</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Codelist.MppvoBauwerksklasse">
+    <xs:annotation>
+      <xs:appinfo>
+        <codeliste>
+          <nameLang>MPPVO Bauwerksklassen</nameLang>
+          <nameKurz>MPPVO Bauwerksklassen</nameKurz>
+          <nameTechnisch>mppvobauwerksklasse</nameTechnisch>
+          <kennung>urn:xoev-de:xbau:codeliste:mppvobauwerksklasse</kennung>
+          <beschreibung>Bauwerksklassen gemäß Anlage 2 zu § 27 Abs. 4 M-PPVO.</beschreibung>
+          <herausgebernameLang>Bauministerkonferenz</herausgebernameLang>
+          <herausgebernameKurz>BMK</herausgebernameKurz>
+        </codeliste>
+        <versionCodeliste>
+          <version>1.0</version>
+          <versionXOEVHandbuch>2.1.0</versionXOEVHandbuch>
+        </versionCodeliste>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="1">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Bauwerksklasse 1</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Bauwerksklasse 2</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Bauwerksklasse 3</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="4">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Bauwerksklasse 4</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Bauwerksklasse 5</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Codelist.MppvoNachpruefungGrund">
+    <xs:annotation>
+      <xs:appinfo>
+        <codeliste>
+          <nameLang>MPPVO Nachprüfung Grund</nameLang>
+          <nameKurz>MPPVO Nachprüfung Grund</nameKurz>
+          <nameTechnisch>mppvonachpruefunggrund</nameTechnisch>
+          <kennung>urn:xoev-de:xbau:codeliste:mppvonachpruefunggrund</kennung>
+          <beschreibung>Prüfung einer überwachungspflichtigen Anlage: Mögliche Gründe dafür, dass eine Nachprüfung erforderlich ist.</beschreibung>
+          <herausgebernameLang>Bauministerkonferenz</herausgebernameLang>
+          <herausgebernameKurz>BMK</herausgebernameKurz>
+        </codeliste>
+        <versionCodeliste>
+          <version>1.0</version>
+          <versionXOEVHandbuch>2.1.0</versionXOEVHandbuch>
+        </versionCodeliste>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="1">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>wegen Ausbauzustand</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>wegen Mangel (neu erkannt)</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>wegen Mangel (bereits bekannt)</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Codelist.MppvoPruefungTechnischeAnlageAnlass">
+    <xs:annotation>
+      <xs:appinfo>
+        <codeliste>
+          <nameLang>MPPVO Anlass Prüfung technische Anlage</nameLang>
+          <nameKurz>MPPVO Anlass Prüfung technische Anlage</nameKurz>
+          <nameTechnisch>mppvopruefungtechnischeanlageanlass</nameTechnisch>
+          <kennung>urn:xoev-de:xbau:codeliste:mppvopruefungtechnischeanlageanlass</kennung>
+          <beschreibung>Anlass der Prüfung einer überwachungspflilchtigen Anlage gemäß Musterprüfverordnung §2 Abs. 2</beschreibung>
+          <herausgebernameLang>Bauministerkonferenz</herausgebernameLang>
+          <herausgebernameKurz>BMK</herausgebernameKurz>
+        </codeliste>
+        <versionCodeliste>
+          <version>1.0</version>
+          <versionXOEVHandbuch>2.1.0</versionXOEVHandbuch>
+        </versionCodeliste>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="1">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>erste Aufnahme der Nutzung der baulichen Anlage</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>nach technischer Änderung der baulichen Anlage</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>nach einer wesentlichen Änderung der technischen Anlage</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="4">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>wiederkehrend</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Codelist.MppvoTechnischeAnlageWeiterbetrieb">
+    <xs:annotation>
+      <xs:appinfo>
+        <codeliste>
+          <nameLang>MPPVO Prüfung technische Anlage Weiterbetrieb</nameLang>
+          <nameKurz>MPPVO Prüfung technische Anlage Weiterbetrieb</nameKurz>
+          <nameTechnisch>mppvotechnischeanlageweiterbetrieb</nameTechnisch>
+          <kennung>urn:xoev-de:xbau:codeliste:mppvotechnischeanlageweiterbetrieb</kennung>
+          <beschreibung>Ergebnis der Prüfung einer überwachungspflilchtigen Anlage: mögliche Festlegungen zum Weiterbetrieb</beschreibung>
+          <herausgebernameLang>Bauministerkonferenz</herausgebernameLang>
+          <herausgebernameKurz>BMK</herausgebernameKurz>
+        </codeliste>
+        <versionCodeliste>
+          <version>1.0</version>
+          <versionXOEVHandbuch>2.1.0</versionXOEVHandbuch>
+        </versionCodeliste>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="1">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Weiterbetrieb ist zulässig (Anlage ist wirksam und betriebssicher)</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Weiterbetrieb ist nicht zulässig</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Weiterbetrieb ist zulässig bis zum Ablauf der angegebenen Frist für die Mängelbeseitigung (ggf. unter Auflagen)</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Codelist.NebenbestimmungArt">
+    <xs:annotation>
+      <xs:appinfo>
+        <codeliste>
+          <nameLang>Nebenbestimmung Art</nameLang>
+          <nameKurz>Nebenbestimmung Art</nameKurz>
+          <nameTechnisch>nebenbestimmungart</nameTechnisch>
+          <kennung>urn:xoev-de:xbau:codeliste:nebenbestimmungart</kennung>
+          <beschreibung>Definition der Arten von Nebenbestimmungen zum Bescheid zu einem Bauvantrag.</beschreibung>
+          <herausgebernameLang>Bauministerkonferenz</herausgebernameLang>
+          <herausgebernameKurz>BMK</herausgebernameKurz>
+        </codeliste>
+        <versionCodeliste>
+          <version>1.0</version>
+          <versionXOEVHandbuch>2.1.0</versionXOEVHandbuch>
+        </versionCodeliste>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="1">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Bedingung</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Auflage</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Vorbehalt</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Codelist.Sonderbauten">
+    <xs:annotation>
+      <xs:appinfo>
+        <codeliste>
+          <nameLang>MBO Typen von Sonderbauten</nameLang>
+          <nameKurz>MBO Typen von Sonderbauten</nameKurz>
+          <nameTechnisch>mbosonderbauten</nameTechnisch>
+          <kennung>urn:xoev-de:xbau:codeliste:mbosonderbauten</kennung>
+          <beschreibung>Liste der Typen von Sonderbauten. Sonderbauten sind Anlagen und Räume besonderer Art oder Nutzung, die die Tatbestände nach § 2 Abs. 4 MBO erfüllen.</beschreibung>
+          <herausgebernameLang>Bauministerkonferenz</herausgebernameLang>
+          <herausgebernameKurz>BMK</herausgebernameKurz>
+        </codeliste>
+        <versionCodeliste>
+          <version>1.0</version>
+          <versionXOEVHandbuch>2.1.0</versionXOEVHandbuch>
+        </versionCodeliste>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="1">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Hochhäuser (Gebäude mit einer Höhe von mehr als 22 m)</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="10">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Gebäude mit Nutzungseinheiten zum Zwecke der Pflege oder Betreuung von Personen, deren Selbstrettungsfähigkeit eingeschränkt ist - die Nutzungseinheiten sind einzeln für mehr als 6 Personen bestimmt</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="11">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Gebäude mit Nutzungseinheiten zum Zwecke der Pflege oder Betreuung von Personen, deren Selbstrettungsfähigkeit eingeschränkt ist - die Nutzungseinheiten sind für Personen mit Intensivpflegebedarf bestimmt</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="12">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Gebäude mit Nutzungseinheiten zum Zwecke der Pflege oder Betreuung von Personen, deren Selbstrettungsfähigkeit eingeschränkt ist - die Nutzungseinheiten haben einen gemeinsamen Rettungsweg und sind insgesamt für mehr als 12 Personen bestimmt</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="13">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Krankenhäuser</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="14">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Sonstige Einrichtung zur Unterbringung von Personen sowie Wohnheime</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="15">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Tageseinrichtung für Kinder, Menschen mit Behinderung und alte Menschen ausgenommen Tageseinrichtungen einschließlich Tagespflege für nicht mehr als zehn Kinder</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="16">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Schulen, Hochschulen und ähnliche Einrichtungen</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="17">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Justizvollzugsanstalten und bauliche Anlagen für den Maßregelvollzug</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="18">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Camping- und Wochenendplätze</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="19">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Freizeit- und Vergnügungsparks</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>bauliche Anlagen mit einer Höhe von mehr als 30 m</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="20">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Fliegende Bauten, soweit sie einer Ausführungsgenehmigung bedürfen</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="21">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Regallager mit einer Oberkante Lagerguthöhe von mehr als 7,50 m</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="22">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>bauliche Anlagen, deren Nutzung durch Umgang oder Lagerung von Stoffen mit Explosions- oder erhöhter Brandgefahr verbunden ist</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="23">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Sonstige Anlagen und Räume, deren Art oder Nutzung mit vergleichbaren Gefahren verbunden sind.</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Gebäude mit mehr als 1600 m² Grundfläche des Geschosses mit der größten Ausdehnung, ausgenommen Wohngebäude und Garagen</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="4">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Verkaufsstätten deren Verkaufsräume und Ladenstraßen eine Grundfläche von insgesamt mehr als 800 m² haben</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Büro- oder Verwaltungsgebäude mit Räumen, die einer Büro- oder Verwaltungsnutzung dienen und einzeln eine Grundfläche von mehr als 400 m² haben</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="6">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Gebäude mit Räumen, die einzeln für die Nutzung durch mehr als 100 Personen bestimmt sind</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="7">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Versammlungsstätte mit Versammlungsräumen, die insgesamt mehr als 200 Besucher fassen, wenn diese Versammlungsräume gemeinsame Rettungswege haben</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="8">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Versammlungsstätte im Freien mit Szenenflächen sowie Freisportanlagen jeweils mit Tribünen, die keine fliegenden Bauten sind und insgesamt mehr als 1000 Besucher fassen</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="9">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Schank- und Speisewirtschaften mit mehr als 40 Gastplätzen in Gebäuden oder mehr als 1000 Gastplätzen im Freien, Beherbergungsstätten mit mehr als 12 Betten und Spielhallen mit mehr als 150 m² Grundfläche</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Codelist.StatistikmeldungAnlass">
+    <xs:annotation>
+      <xs:appinfo>
+        <codeliste>
+          <nameLang>Statistikmeldung Anlass</nameLang>
+          <nameKurz>Statistikmeldung Anlass</nameKurz>
+          <nameTechnisch>statistikmeldunganlass</nameTechnisch>
+          <kennung>urn:xoev-de:xbau:codeliste:statistikmeldunganlass</kennung>
+          <beschreibung>Diese Codeliste enthält die Anlässe für Datenlieferungen an die amtliche Statistik.</beschreibung>
+          <herausgebernameLang>Bauministerkonferenz</herausgebernameLang>
+          <herausgebernameKurz>BMK</herausgebernameKurz>
+        </codeliste>
+        <versionCodeliste>
+          <version>1.0</version>
+          <versionXOEVHandbuch>2.1.0</versionXOEVHandbuch>
+        </versionCodeliste>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="1">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Baugenehmigung</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Baufertigstellung</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Bauüberhang (Bauzustandsabfrage des Amtes für Statistik)</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="4">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Bauabgang (Beseitigung baulicher Anlagen)</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Codelist.VorbescheidBetreff">
+    <xs:annotation>
+      <xs:appinfo>
+        <codeliste>
+          <nameLang>Vorbescheid Betreff</nameLang>
+          <nameKurz>Vorbescheid Betreff</nameKurz>
+          <nameTechnisch>vorbescheidbetreff</nameTechnisch>
+          <kennung>urn:xoev-de:xbau:codeliste:vorbescheidbetreff</kennung>
+          <beschreibung>Definition der Kategorien von Gegenständen von Vorbescheiden, die im Rahmen der Vorbereitung eines Bauprojekts beantragt werden können.</beschreibung>
+          <herausgebernameLang>Bauministerkonferenz</herausgebernameLang>
+          <herausgebernameKurz>BMK</herausgebernameKurz>
+        </codeliste>
+        <versionCodeliste>
+          <version>1.0</version>
+          <versionXOEVHandbuch>2.1.0</versionXOEVHandbuch>
+        </versionCodeliste>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="1">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Die Frage betrifft die Zulässigkeit einer Abweichung.</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Die Frage betrifft die Zulässigkeit einer Erleichterung.</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Es wird die Frage gestellt, ob ein gegebenes Vorhaben zulässig im Außenbereich (gem. §35 BauGB) ist.</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="4">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Frage ob vereinbar mit dem Einfügungsgebot (gem. §34 Absätze 1 bis 3 BauGB)</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Frage zu einem sonstigen Aspekt</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Codelist.VorlagenBauantragBauvorhaben">
+    <xs:annotation>
+      <xs:appinfo>
+        <codeliste>
+          <nameLang>Vorlagen zur Beurteilung des Bauvorhabens</nameLang>
+          <nameKurz>Vorlagen zur Beurteilung des Bauvorhabens</nameKurz>
+          <nameTechnisch>vorlagenbauantragbauvorhaben</nameTechnisch>
+          <kennung>urn:xoev-de:xbau:codeliste:vorlagenbauantragbauvorhaben</kennung>
+          <beschreibung>Diese Codeliste nennt Arten von Bauvorlagen, die einem Bauantrag als Anlagen beigefügt sein können und die zur Beurteilung des Bauvorhabens notwendig sind. Quelle ist § 68 Abs. 2 MBO in Verbindung mit MBauVorlVO Teil II+III.</beschreibung>
+          <herausgebernameLang>Bauministerkonferenz</herausgebernameLang>
+          <herausgebernameKurz>BMK</herausgebernameKurz>
+        </codeliste>
+        <versionCodeliste>
+          <version>1.0</version>
+          <versionXOEVHandbuch>2.1.0</versionXOEVHandbuch>
+        </versionCodeliste>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="1">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Angaben über die gesicherte Erschließung (§ 3 Nr. 6 MBauVorlVO)</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="10">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Brandschutznachweis (§ 11 MBauVorlVO)</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="11">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Nachweis für Wärme-, Schall-, Erschütterungsschutz (§ 12 MBauVorlVO)</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="12">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Modell zur Beurteilung des Bauvorhabens (§ 1 Abs. 4 MBauVorlVO)</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="13">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>weitere Nachweise zur Beurteilung des Bauvorhabens (§ 1 Abs. 4 MBauVorlVO) - Betriebsbeschreibung</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="14">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>weitere Nachweise zur Beurteilung des Bauvorhabens (§ 1 Abs. 4 MBauVorlVO) - Stellplatznachweis</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="15">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>weitere Nachweise zur Beurteilung des Bauvorhabens (§ 1 Abs. 4 MBauVorlVO) - Typenprüfungen</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="16">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>weitere Nachweise zur Beurteilung des Bauvorhabens (§ 1 Abs. 4 MBauVorlVO) - Zustimmung im Einzelfall</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="17">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>weitere Nachweise zur Beurteilung des Bauvorhabens (§ 1 Abs. 4 MBauVorlVO) - Unterlagen zur UVP</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Berechnung des Maßes der geplanten baulichen Nutzung (§ 3 Nr. 7 MBauVorlVO)</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Liegenschaftskarte (§ 7 MBauVorlVO)</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="4">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Lageplan (§ 7 MBauVorlVO)</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Grundriss (§ 8 MBauVorlVO)</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="6">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Schnitt (§ 8 MBauVorlVO)</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="7">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Ansicht (§ 8 MBauVorlVO)</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="8">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Baubeschreibung (§9 MBauVorlVO)</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="9">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Standsicherheitsnachweis (§ 10 MBauVorlVO)</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Codelist.VorlagenBauantragBearbeitung">
+    <xs:annotation>
+      <xs:appinfo>
+        <codeliste>
+          <nameLang>Vorlagen zur Bearbeitung des Bauantrags</nameLang>
+          <nameKurz>Vorlagen zur Bearbeitung des Bauantrags</nameKurz>
+          <nameTechnisch>vorlagenbauantragbearbeitung</nameTechnisch>
+          <kennung>urn:xoev-de:xbau:codeliste:vorlagenbauantragbearbeitung</kennung>
+          <beschreibung>Diese Codeliste nennt Arten von Bauvorlagen, die einem Bauantrag als Anlagen beigefügt sein können und die zur Bearbeitung des Bauantrags benötigt werden.  Quelle ist § 68 Abs. 2 MBO in Verbindung mit MBauVorlVO Teil II+III.</beschreibung>
+          <herausgebernameLang>Bauministerkonferenz</herausgebernameLang>
+          <herausgebernameKurz>BMK</herausgebernameKurz>
+        </codeliste>
+        <versionCodeliste>
+          <version>1.0</version>
+          <versionXOEVHandbuch>2.1.0</versionXOEVHandbuch>
+        </versionCodeliste>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="1">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Nachweis der Bauvorlageberechtigung (§ 65 Abs. 2 MBO) - Architekt (§ 65 Abs. 2 Nr. 1 MBO)</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="10">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Nachweis zur Erstellung/Prüfung der bautechnischen Nachweise (§ 66 MBO) - PSV Standsicherheit (§ 66 Abs. 3 Satz 1 MBO)</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="11">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>vom Nachbarn unterzeichnete Lagepläne und Bauzeichnungen (§ 70 Abs. 2 MBO)</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="12">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Erklärung einer Baulast (§ 83 MBO) – (noch zu klären, noch nicht abgestimmt)</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="13">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Zustimmung des Grundstückseigentümers (§ 68 Abs. 4 MBO)</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Nachweis der Bauvorlageberechtigung (§ 65 Abs. 2 MBO) - Bauingenieur  (§ 65 Abs. 2 Nr. 2 MBO)</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Nachweis der Bauvorlageberechtigung (§ 65 Abs. 2 MBO) - Innenarchitekt (§ 65 Abs. 2 Nr. 3 MBO)</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="4">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Nachweis der Bauvorlageberechtigung (§ 65 Abs. 2 MBO) - Planer im öffentlichen Dienst (§ 65 Abs. 2 Nr. 4 MBO)</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Nachweis zur Erstellung/Prüfung der bautechnischen Nachweise (§ 66 MBO) - Tragwerksplaner (§ 66 Abs. 2 Satz 2 MBO)</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="6">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Nachweis zur Erstellung/Prüfung der bautechnischen Nachweise (§ 66 MBO) - Brandschutzplaner (§ 66 Abs. 2 Satz 3 MBO)</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="7">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Nachweis zur Erstellung/Prüfung der bautechnischen Nachweise (§ 66 MBO) - PrüfIng Brandschutz (§ 66 Abs. 2 Satz 3 MBO)</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="8">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Nachweis zur Erstellung/Prüfung der bautechnischen Nachweise (§ 66 MBO) - PrüfIng Standsicherheit (§ 66 Abs. 3 Satz 2 MBO)</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="9">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Nachweis zur Erstellung/Prüfung der bautechnischen Nachweise (§ 66 MBO) - PSV Brandschutz (§ 66 Abs. 2 Satz 3 MBO)</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Codelist.VorlagenBauzustand">
+    <xs:annotation>
+      <xs:appinfo>
+        <codeliste>
+          <nameLang>Vorlagen zur Bauzustandsanzeige</nameLang>
+          <nameKurz>Vorlagen zur Bauzustandsanzeige</nameKurz>
+          <nameTechnisch>vorlagenbauzustand</nameTechnisch>
+          <kennung>urn:xoev-de:xbau:codeliste:vorlagenbauzustand</kennung>
+          <beschreibung>Diese Codeliste nennt Arten von Bauvorlagen, die als Anlagen zu Bauzustandsanzeigen dienen können. Quelle ist § 81 MBO in Verbindung mit MBauVorlV Teil IV. 
+Diese Unterlagen sind keine Bauvorlagen zum Bauantrag gem. § 68 Abs. 2 MBO, sondern weitere Bauzustandsanzeigen zur Bauüberwachung gem. § 81 MBO.</beschreibung>
+          <herausgebernameLang>Bauministerkonferenz</herausgebernameLang>
+          <herausgebernameKurz>BMK</herausgebernameKurz>
+        </codeliste>
+        <versionCodeliste>
+          <version>1.0</version>
+          <versionXOEVHandbuch>2.1.0</versionXOEVHandbuch>
+        </versionCodeliste>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="1">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Baulasten (§ 83 MBO)</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="10">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Brandschutznachweis nach § 11 MBauVorlVO (§ 15 MBauVorlVO)</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="11">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Proben von Bauprodukten (§ 81 Abs. 3 MBO)</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Baubeginnanzeige nach § 72 Abs. 8, § 62 Abs. 5 MBO (§ 14 MBauVorlVO)</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Anzeige der beabsichtigten Nutzungsaufnahme nach § 82 Abs. 2 MBO (§ 15 MBauVorlVO)</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="4">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Nachweis über die Absteckung der Grundrissfläche und die Festlegung der Höhenlage (§ 72 Abs. 7 MBO)</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Erklärung des Nachweiserstellers über die Erstellung des bautechnischen Nachweises gem. § 66 Abs. 1 Satz 2, Abs. 2 MBO. (§ 14 Abs. 1 MBauVorlVO)</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="6">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Bescheinigung des Prüfsachverständigen zum Standsicherheitsnachweis gem. § 66 Abs. 3 Satz 1 MBO. (§ 14 Abs. 2 MBauVorlVO)</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="7">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Bescheinigung des Prüfsachverständigen zum Brandschutz gem. § 66 Abs. 3 Satz 2 i.V.m.  § 82 Abs. 2 Satz 2 MBO (§ 15 MBauVorlVO)</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="8">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Erklärung des Tragwerksplaners, dass nach Maßgabe des Kriterienskataloges der Anlage 2 zur MBauVorlVO eine Prüfung des Standsicherheitsnachweises nicht erforderlich ist gem. § 66 Abs. 3 Satz 1 Halbs. 1 Nr. 2 MBO. (§ 14 Abs. 3 MBauVorlVO)</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="9">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>Bestätigung der Bauausführung in Übereinstimmung mit dem Brandschutznachweis (§ 81 Abs. 2 Satz 2)</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Codelist.XBauNachrichten">
+    <xs:annotation>
+      <xs:appinfo>
+        <codeliste>
+          <nameLang>XBau-Nachrichten</nameLang>
+          <nameKurz>XBau-Nachrichten</nameKurz>
+          <nameTechnisch>xbau-nachrichten</nameTechnisch>
+          <kennung>urn:xoev-de:xbau:codeliste:xbau-nachrichten</kennung>
+          <beschreibung>Codeliste der Bezeichnungen aller XBau-Nachrichten.</beschreibung>
+          <herausgebernameLang>Bauministerkonferenz</herausgebernameLang>
+          <herausgebernameKurz>BMK</herausgebernameKurz>
+        </codeliste>
+        <versionCodeliste>
+          <version>1.0</version>
+          <versionXOEVHandbuch>2.1.0</versionXOEVHandbuch>
+        </versionCodeliste>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="0200">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>baugenehmigung.antrag.0200</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0201">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>baugenehmigung.formellePruefung.0201</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0202">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>baugenehmigung.antragGeaendert.0202</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0203">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>baugenehmigung.anhoerung.0203</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0204">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>baugenehmigung.stellungnahme.0204</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0205">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>baugenehmigung.bescheid.0205</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0206">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>baugenehmigung.gebuehrenbescheid.0206</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0210">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>vorbescheid.antrag.0210</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0211">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>vorbescheid.formellePruefung.0211</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0212">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>vorbescheid.antragGeaendert.0212</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0213">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>vorbescheid.anhoerung.0213</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0214">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>vorbescheid.stellungnahme.0214</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0215">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>vorbescheid.bescheid.0215</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0216">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>vorbescheid.gebuehrenbescheid.0216</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0220">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>abweichung.antrag.0220</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0221">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>abweichung.formellePruefung.0221</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0222">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>abweichung.antragGeaendert.0222</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0223">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>abweichung.anhoerung.0223</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0224">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>abweichung.stellungnahme.0224</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0225">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>abweichung.bescheid.0225</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0226">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>abweichung.gebuehrenbescheid.0226</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0300">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>beteiligung.aufforderung.0300</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0301">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>beteiligung.formellePruefung.0301</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0302">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>beteiligung.aufforderungKorrektur.0302</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0303">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>beteiligung.stellungnahme.0303</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0400">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>informationsempfaenger.benachrichtigung.0400</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0410">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>informationsempfaenger.statistikmeldung.0410</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0500">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>bautechnischeNachweise.pruefauftrag.0500</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0501">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>bautechnischeNachweise.auftragsbestaetigung.0501</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0502">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>bautechnischeNachweise.formellePruefung.0502</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0503">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>bautechnischeNachweise.pruefauftragKorrektur.0503</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0504">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>bautechnischeNachweise.anforderungNachbesserung.0504</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0505">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>bautechnischeNachweise.nachbesserung.0505</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0506">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>bautechnischeNachweise.pruefbericht.0506</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0507">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>bautechnischeNachweise.rechnung.0507</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0600">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>genehmigungsfreistellung.anzeige.0600</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0601">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>genehmigungsfreistellung.anzeigeBAB.0601</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0602">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>genehmigungsfreistellung.ergebnis.0602</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0603">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>genehmigungsfreistellung.ergebnisBAB.0603</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0700">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>baulasten.vorlageErklaerung.0700</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0701">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>baulasten.nachforderung.0701</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0702">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>baulasten.information.0702</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0703">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>baulasten.gebuehrenbescheid.0703</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0800">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>ueberwachungspflichtigeAnlagen.pruefbescheinigung.0800</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0801">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>ueberwachungspflichtigeAnlagen.erinnerung.0801</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0900">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>anzeige.baubeginn.0900</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0901">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>anzeige.baubeginnUntersagung.0901</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0910">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>anzeige.nutzungsaufnahme.0910</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0911">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>anzeige.nutzungsaufnahmeUntersagung.0911</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0920">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>bauzustand.anzeige.0920</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0921">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>bauzustand.befundliste.0921</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0922">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>bauzustand.freigabe.0922</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0950">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>anzeige.beseitigungAbsicht.0950</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0952">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>anzeige.beseitigungGeaendert.0952</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0953">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>anzeige.beseitigungUntersagung.0953</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0955">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>anzeige.beseitigungBestaetigung.0955</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1100">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>prozessnachrichten.rueckweisung.G2G.1100</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1101">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>prozessnachrichten.rueckweisung.G2privat.1101</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1102">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>prozessnachrichten.rueckweisung.privat2G.1102</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1120">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>prozessnachrichten.eingangsbestaetigung.1120</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1121">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>prozessnachrichten.aktenzeichen.1121</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1130">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>prozessnachrichten.ruecknahme.1130</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1131">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>prozessnachrichten.quittierungRuecknahme.1131</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1140">
+        <xs:annotation>
+          <xs:appinfo>
+            <wertErsteBeschreibungsspalte>prozessnachrichten.formellePruefungBefundliste.1140</wertErsteBeschreibungsspalte>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>
+
