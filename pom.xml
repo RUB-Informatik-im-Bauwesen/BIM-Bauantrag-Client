@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>inf.bi.rub.de</groupId>
   <artifactId>BIM-Bauantrag-Client</artifactId>
-  <version>2018.8.1</version>
+  <version>2020.8.1</version>
   <build>
     <sourceDirectory>src</sourceDirectory>
     <resources>
@@ -30,37 +30,37 @@
 	    <dependency>
 		    <groupId>org.openjfx</groupId>
 		    <artifactId>javafx-base</artifactId>
-		    <version>13.0.1</version>
+		    <version>15-ea+7</version>
 		</dependency>
 		<dependency>
 		    <groupId>org.openjfx</groupId>
 		    <artifactId>javafx-controls</artifactId>
-		    <version>13.0.1</version>
+		    <version>15-ea+7</version>
 		</dependency>
 		<dependency>
 		    <groupId>org.openjfx</groupId>
 		    <artifactId>javafx-fxml</artifactId>
-		    <version>13.0.1</version>
+		    <version>15-ea+7</version>
 		</dependency>
 		<dependency>
 		    <groupId>org.openjfx</groupId>
 		    <artifactId>javafx-graphics</artifactId>
-		    <version>13.0.1</version>
+		    <version>15-ea+7</version>
 		</dependency>
 		<dependency>
 		    <groupId>org.openjfx</groupId>
 		    <artifactId>javafx-media</artifactId>
-		    <version>13.0.1</version>
+		    <version>15-ea+7</version>
 		</dependency>
 		<dependency>
 		    <groupId>org.openjfx</groupId>
 		    <artifactId>javafx-swing</artifactId>
-		    <version>13.0.1</version>
+		    <version>15-ea+7</version>
 		</dependency>
 		<dependency>
 		    <groupId>org.openjfx</groupId>
 		    <artifactId>javafx-web</artifactId>
-		    <version>13.0.1</version>
+		    <version>15-ea+7</version>
 		</dependency>
 		
 		
@@ -69,6 +69,9 @@
 		    <artifactId>gt-epsg-hsql</artifactId>
 		    <version>23.2</version>
 		</dependency>
+
+
+		
    
 		
 	</dependencies>
